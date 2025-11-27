@@ -1,0 +1,481 @@
+.about-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: fit-content;
+    text-align: left;
+}
+
+/* Add spacing between "About" and "Us" */
+.about-title span {
+    word-spacing: 0.5rem;
+}
+
+/* Underline only under "Us" */
+.about-title .underline {
+    width: 30%;
+    height: 4px;
+    background: #EA244F;
+    position: absolute;
+    bottom: -0.2rem;
+    right: 0;
+    /* Positions underline under last word */
+}
+
+/* About Text Section */
+.about-text {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    /* Increased height for readability */
+    margin-bottom: 0.8rem;
+    /* Increased gap between paragraphs */
+}
+
+/* Learn More Section */
+.learn-more-link {
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: #ec4a6d;
+    display: inline-block;
+}
+
+/* Optional animation */
+@keyframes slideUnderline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 45%;
+    }
+}
+
+
+/* ----------------------------------------- */
+/* FORM CARD OUTER CONTAINER                 */
+/* ----------------------------------------- */
+.form-card {
+    width: 96%;
+    /* matches css-1px4sil at small screens */
+    background: #FCE1EA;
+    border: 2px solid #115c8e;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* BACKGROUND GRADIENT BORDER FRAME (Right Offset) */
+.form-border-frame {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    /* <-- gradient visible on RIGHT */
+    height: 100%;
+    width: 100%;
+
+    border: 10px solid transparent;
+    border-radius: 16px;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(to top, #115c8e, #f4829d) border-box;
+
+    z-index: 1;
+}
+
+
+/* ----------------------------------------- */
+/* FORM TITLES                                */
+/* ----------------------------------------- */
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.text-title-strong {
+    font-weight: 700;
+    border-bottom: 4px solid #EA244F;
+    padding-bottom: 2px;
+}
+
+.form-subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.keep-text {
+    font-weight: 500;
+    /* normal */
+}
+
+.connected-text {
+    font-weight: 900;
+    /* bold */
+    border-bottom: 4px solid #EA244F;
+    padding-bottom: 2px;
+}
+
+
+/* ----------------------------------------- */
+/* FORM GROUP                                 */
+/* ----------------------------------------- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* background: #FCE1EA; */
+    /* gap: 4px; */
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    background: #FCE1EA;
+    /* color: #000000; */
+}
+
+/* ----------------------------------------- */
+/* FORM INPUTS — Perfect MUI Look             */
+/* ----------------------------------------- */
+.form-input {
+    width: 100%;
+    padding: 14px 14px;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid #000000;
+    font-family: "Montserrat", sans-serif;
+    background: #FCE1EA;
+    outline: none;
+    transition: 0.2s ease;
+    /* color: #000000; */
+}
+
+/* MUI Border on focus */
+/* .form-input:focus {
+    border-color: #115c8e;
+    box-shadow: 0 0 0 1px #115c8e;
+} */
+
+/* For select elements */
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #b0b0b0;
+    /* default light border */
+    background-color: #FCE1EA;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.form-input:hover,
+.form-select:hover {
+    border-color: #000;
+    /* black border */
+    /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); */
+    /* slight glow */
+}
+
+.form-input::placeholder {
+    color: #424242;
+    font-weight: 500;
+}
+
+/* Focus (active typing state) */
+.form-input:focus,
+.form-select:focus {
+    border-color: #000;
+    /* bold black */
+    border-width: 2px;
+    /* slightly thicker */
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.25); */
+    /* stronger glow */
+}
+
+
+
+/* Closed state: styled like input */
+.form-select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #b0b0b0;
+    background-color: #FCE1EA;
+    /* closed state */
+    /* color: #000000; */
+    color: #424242;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    appearance: none;
+    cursor: pointer;
+
+    /* custom arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+/* OPEN DROPDOWN LIST OVERRIDE (Chrome, Edge, Safari) */
+.form-select option {
+    background-color: #fff !important;
+    /* dropdown should be white */
+    color: #000 !important;
+    /* dropdown text black */
+}
+
+
+
+/* ----------------------------------------- */
+/* BUTTON — matches .css-134dkvr exactly      */
+/* ----------------------------------------- */
+.register-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    padding: 16px 16px;
+    background: linear-gradient(to right, #115c8e, #f4829d);
+    border: 2px solid #EA244F;
+    color: white;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.register-btn:hover {
+    /* opacity: 0.9; */
+    box-shadow: 0px 2px 4px #5a5353;
+    /* transform: translateY(-2px); */
+}
+
+/* ----------------------------------------- */
+/* SOCIAL ICONS                               */
+/* ----------------------------------------- */
+.social-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    /* Removes default p tag spacing */
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #f4829d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-box img {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ----------------------------------------- */
+/* STATS SECTION                              */
+/* ----------------------------------------- */
+.stats-box {
+    color: #115C8E;
+    text-align: center;
+}
+
+.stat-number {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.stat-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Always keep 2-column structure —_override Tailwind's grid-cols-1 on small screens */
+.about-container form {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem;
+}
+
+/* Name field stays full width */
+.about-container form .full-width {
+    grid-column: span 2 !important;
+}
+
+
+/* ------------------------------ */
+/* RESPONSIVE FORM LAYOUT         */
+/* ------------------------------ */
+
+/* When form shifts downward (below 900px) */
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    /* Reduce Keep Connected size */
+    .form-title {
+        font-size: 1.5rem;
+        /* earlier 2rem */
+    }
+
+    .keep-text {
+        font-weight: 500;
+    }
+
+    .connected-text {
+        font-weight: 900;
+        border-bottom: 3px solid #EA244F;
+    }
+
+    /* Subtitle smaller */
+    .form-subtitle {
+        font-size: 1rem;
+    }
+
+    /* STAT NUMBERS smaller */
+    .stat-number {
+        font-size: 1rem;
+        /* earlier 1.2rem */
+    }
+
+    /* STAT TEXT smaller */
+    .stat-text {
+        font-size: 0.85rem;
+        /* earlier 1rem */
+    }
+
+    @media (max-width: 900px) {
+        .form-border-frame {
+            top: -15px;
+            right: -15px;
+        }
+    }
+
+}
+
+
+/* Responsive small screens */
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 1.7rem;
+    }
+
+    .about-title .underline {
+        width: 60%;
+    }
+}
+
+/* ------ FIX FOR 520px AND BELOW ------ */
+@media (max-width: 520px) {
+
+    /* FORM CARD */
+    .right-section .w-\[96\%\],
+    .right-section .form-card {
+        padding: 10px !important;
+        height: auto !important;
+        /* allows card to shrink */
+    }
+
+    /* FORM TEXT + INPUTS */
+    .form-title {
+        font-size: 1.1rem;
+    }
+
+    .form-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .form-input,
+    .form-select {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+
+    /* BUTTON */
+    .register-btn {
+        padding: 10px 14px;
+        font-size: 0.55rem;
+    }
+
+    /* FIX FIELD WIDTH SHRINKING */
+    .about-container form {
+        grid-template-columns: 1fr 1fr !important;
+        /* still 2 per row */
+        gap: 6px !important;
+    }
+
+    .form-group {
+        width: 100% !important;
+    }
+
+    /* NAME full width */
+    .name-full {
+        grid-column: span 2 !important;
+    }
+
+    /* DEGREE full width (optional) */
+    .degree-full {
+        grid-column: span 2 !important;
+    }
+
+    /* SOCIAL SECTION FIX */
+    .social-section {
+        gap: 0.5rem;
+    }
+
+    .social-box {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-box img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .social-icons {
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        /* prevents overflow */
+    }
+}

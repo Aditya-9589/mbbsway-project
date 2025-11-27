@@ -1,0 +1,223 @@
+/* ===========================================================
+   PAGINATION (RIGHT SIDE)
+=========================================================== */
+
+.external-pagination {
+    position: absolute !important;
+    right: 100px !important;     /* back to right edge */
+    top: 50% !important;
+    transform: translateY(-60%) !important;     /* remove the X-shift */
+    margin-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    z-index: 9999 !important;
+}
+
+.external-pagination .swiper-pagination-bullet {
+    background: #ffffff !important;
+    color: #000 !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.external-pagination .swiper-pagination-bullet-active {
+    background: linear-gradient(to top,
+            #064266 0%,
+            #736c94 40%,
+            #e9809c 100%) !important;
+    color: #fff !important;
+}
+
+/* ===========================================================
+   BASE SLIDER HEIGHTS
+=========================================================== */
+
+.swiper {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+}
+
+.swiper,
+.swiper-slide {
+    height: 700px !important;
+}
+
+/* Ensure image is clean and NOT zoomed */
+.swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+}
+
+/* ===========================================================
+   BOTTOM BUTTONS (BASE)
+=========================================================== */
+
+.bottom-btn-wrapper {
+    position: absolute !important;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 50;
+}
+
+/* Desktop buttons */
+.bottom-btn {
+    background: #ffffff;
+    color: #090909;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    min-width: 260px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #F4829D;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bottom-btn.active,
+.bottom-btn:hover {
+    background: linear-gradient(to left, #064266, #736c94, #e9809c);
+    color: #fff;
+}
+
+/* ============================================
+   780px → BUTTONS MOVE BELOW SLIDER IN 2 ROWS
+=============================================== */
+@media (max-width: 780px) {
+
+    /* Wrapper moves outside the image */
+    .bottom-btn-wrapper {
+        position: static !important;
+        /* no absolute */
+        margin-top: 12px;
+        padding: 0 12px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    /* Two buttons per row */
+    .bottom-btn {
+        width: 45% !important;
+        min-width: unset !important;
+        font-size: 14px !important;
+        padding: 8px 10px !important;
+        margin: 0;
+    }
+}
+
+/* ===========================================================
+   💻 TABLETS → 1280px and BELOW
+=========================================================== */
+@media (max-width: 1280px) {
+
+    .swiper,
+    .swiper-slide {
+        height: 560px !important;
+    }
+
+    .external-pagination {
+        right: 25px !important;
+    }
+
+    .bottom-btn {
+        font-size: 17px;
+        min-width: 240px;
+        padding: 9px 24px;
+    }
+}
+
+/* ===========================================================
+   📱 BIG MOBILE → 1024px
+=========================================================== */
+@media (max-width: 1024px) {
+
+    .swiper,
+    .swiper-slide {
+        height: 480px !important;
+    }
+
+    .bottom-btn {
+        font-size: 15px;
+        min-width: 200px;
+        padding: 8px 20px;
+    }
+
+    .external-pagination {
+        right: 15px !important;
+        gap: 10px !important;
+    }
+
+    .external-pagination .swiper-pagination-bullet {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* ===========================================================
+   📱 MOBILE → 768px
+=========================================================== */
+@media (max-width: 768px) {
+
+    .swiper,
+    .swiper-slide {
+        height: 300px !important;
+    }
+
+    .external-pagination {
+        right: 10px !important;
+    }
+
+    .external-pagination .swiper-pagination-bullet {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 12px !important;
+    }
+
+    .bottom-btn {
+        font-size: 12px;
+        min-width: 140px;
+        padding: 6px 14px;
+        margin: 0 2px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* ===========================================================
+   📱 SMALL MOBILE → 480px
+=========================================================== */
+@media (max-width: 480px) {
+
+    .swiper,
+    .swiper-slide {
+        height: 250px !important;
+    }
+
+    .bottom-btn {
+        font-size: 11px;
+        min-width: 120px;
+        padding: 6px 12px;
+    }
+}

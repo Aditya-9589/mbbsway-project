@@ -1,0 +1,100 @@
+/* Outer wrapper */
+.admission-slider-section {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Swiper container */
+.admission-swiper {
+    width: 100%;
+    --swiper-navigation-size: 18px !important;
+    /* smaller arrows */
+}
+
+/* Image Height Updated */
+.admission-slide-image {
+    width: 100%;
+
+    /* height: 70vh; */
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* Smooth fade transition */
+.admission-swiper .swiper-wrapper {
+    transition-timing-function: ease;
+}
+
+.admission-swiper .swiper-slide {
+    transition-duration: 300ms !important;
+    /* smoother, slower fade */
+}
+
+/* Set the overall slider height here */
+.admission-swiper,
+.admission-swiper .swiper-wrapper,
+.admission-swiper .swiper-slide {
+    height: 70vh !important;
+}
+
+/* Navigation arrow styling */
+.admission-swiper .swiper-button-prev,
+.admission-swiper .swiper-button-next {
+    color: #ffffff;
+    background: linear-gradient(to top, #115c8e, #f4829d);
+    border-radius: 50%;
+    padding: 1.5rem;
+    /* optional */
+}
+
+/* Arrow ICON itself (the < and >) */
+.admission-swiper .swiper-button-prev::after,
+.admission-swiper .swiper-button-next::after {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    /* or inherit */
+}
+
+/* Set actual characters for arrows */
+.admission-swiper .swiper-button-prev::after {
+    content: '‹';
+    /* Left arrow */
+}
+
+.admission-swiper .swiper-button-next::after {
+    content: '›';
+    /* Right arrow */
+}
+
+
+
+/* Shift arrows inward */
+.admission-swiper .swiper-button-prev {
+    left: 4rem !important;
+}
+
+.admission-swiper .swiper-button-next {
+    right: 4rem !important;
+}
+
+/* Mobile width */
+@media (min-width: 320px) and (max-width: 767px) {
+    .admission-swiper {
+        width: 100%;
+    }
+
+    /* Mobile image height smaller */
+    .admission-slide-image {
+        height: 40vh;
+    }
+
+    /* Arrows smaller on mobile */
+    .admission-swiper {
+        --swiper-navigation-size: 22px !important;
+    }
+}

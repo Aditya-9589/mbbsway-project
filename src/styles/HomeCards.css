@@ -1,0 +1,151 @@
+/* MAIN CARD BOX */
+.homecard-box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 20rem;
+    border-radius: 3%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP GRADIENT BAR (HEADER) */
+.homecard-header {
+    background: linear-gradient(to left, #115c8e, #f4829d);
+    height: 2.5rem;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.95rem;
+}
+
+/* ICON IN HEADER */
+.homecard-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+
+/* SCROLL AREA */
+.homecard-body {
+    flex: 1;
+    padding: 10px 12px;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 8.5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #115c8e, #f4829d);
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+/* UNIVERSITY ROW */
+.uni-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.uni-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.uni-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uni-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* LINKS */
+.link-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.link-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+/* ========================================================= */
+/*                    HOVER FILL ANIMATION                   */
+/* ========================================================= */
+
+/* ------------------------------
+      UNIVERSAL HOVER FILL
+------------------------------ */
+
+.hover-fill {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Sliding background animation */
+.hover-fill::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #115c8e;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease-in-out;
+    z-index: 0;
+}
+
+/* Expand background on hover */
+.hover-fill:hover::before {
+    transform: scaleX(1);
+}
+
+/* Text + icons must stay ABOVE blue fill */
+.hover-fill * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Make text white on hover FOR BOTH cards */
+.hover-fill:hover {
+    color: white !important;
+}
+
+.hover-fill:hover * {
+    color: white !important;
+    fill: white !important;
+}
+
+/* Special: For UniversityCard logos */
+.hover-fill:hover .uni-img img {
+    border: 1px solid white;
+    border-radius: 4px;
+}

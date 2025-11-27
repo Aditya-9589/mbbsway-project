@@ -1,0 +1,330 @@
+/* ============================
+   NEET CONSULTANCY SECTION
+============================= */
+
+.neet-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0rem 0rem;
+    font-family: Montserrat, sans-serif;
+}
+
+.neet-heading-wrapper {
+    padding: 0rem 0rem 0rem 5rem;
+}
+
+.neet-heading {
+    margin: 0 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+    width: 100%;
+}
+
+.neet-heading-underline {
+    width: 20%;
+    border-bottom: 4px solid #EA244F;
+    padding-bottom: 2px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* ============================
+   BACKGROUND WRAPPER
+============================= */
+
+.neet-content-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg,
+            #FFFFFF,
+            #FAFBFF,
+            #EFF6FE,
+            #D9EAFA,
+            #CBE6FA,
+            #8FC5E2,
+            #B5D8F6);
+}
+
+.neet-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: url("/static/media/homebooknowandadmissbannerimg.2352a83….png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 0rem 0rem;
+    margin-bottom: 0rem;
+    border-radius: 8px;
+    gap: 2rem;
+}
+
+.neet-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0rem;
+}
+
+
+/* ============================
+   GRID CONTAINER
+============================= */
+
+
+.neet-left {
+    padding-left: 5rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    /* <<< FIX */
+    align-items: flex-start;
+    /* text + button aligned properly */
+    justify-content: center;
+    gap: 1rem;
+    /* optional clean spacing */
+
+    /* margin-top: -1.5rem; */
+}
+
+.neet-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 900px) {
+
+    .neet-left,
+    .neet-right {
+        flex-basis: 50%;
+        /* Will share equal space */
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .neet-left,
+    .neet-right {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 920px) {
+    .neet-left-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* limit to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        max-width: 90%;
+        /* reduces width gradually */
+        white-space: normal;
+    }
+}
+
+
+
+.neet-left-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0rem;
+    color: #115C8E;
+}
+
+
+.neet-book-btn {
+    width: 10rem;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to top, #115c8e, #f4829d) border-box;
+    border: 2px solid transparent;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+    margin: 0rem;
+}
+
+.neet-book-btn:hover {
+    background: linear-gradient(to left, #115c8e, #f4829d) border-box;
+    border: 2px solid transparent;
+    color: white;
+}
+
+
+@media (min-width: 900px) {
+    .neet-book-btn {
+        width: 23%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE (Below 920px)
+============================================ */
+@media (max-width: 920px) {
+
+    .neet-content-wrapper {
+        background: linear-gradient(90deg,
+                #FFFFFF,
+                #FFFFFF,
+                #FAFCFF,
+                #F4F8FF,
+                #EAF3FF,
+                #E2EEFF);
+    }
+
+    /* Remove huge desktop padding */
+    .neet-heading-wrapper {
+        padding: 0 1.5rem;
+        text-align: left;
+    }
+
+    .neet-heading {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    /* Main container becomes a column */
+    .neet-content {
+        flex-direction: column;
+        text-align: left;
+        /* padding: 2rem 1.5rem; */
+        background-position: top right;
+        /* optional but looks clean */
+    }
+
+    /* Left area full width */
+    .neet-left {
+        width: 100%;
+        flex-basis: 100%;
+        padding: 1.5rem 1.5rem;
+        align-items: flex-start;
+    }
+
+    /* Left title responsive */
+    .neet-left-title {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        max-width: 100%;
+        /* full width */
+        -webkit-line-clamp: unset;
+        /* allow natural flow */
+    }
+
+    /* Button below text */
+    .neet-book-btn {
+        width: 12rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Image goes below */
+    .neet-right {
+        width: 100% !important;
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        display: block;
+        /* very important */
+        padding: 0;
+        margin: 0;
+    }
+
+    .neet-image-wrapper {
+        width: 100% !important;
+        display: block;
+    }
+
+    .neet-image-wrapper img {
+        width: 100% !important;
+        height: auto;
+        display: block;
+        /* removes inline gap issues */
+        margin: 1rem 0 0 0;
+    }
+
+}
+
+
+/* ============================================
+   ULTRA-SMALL DEVICES (Below 420px)
+============================================ */
+@media (max-width: 420px) {
+
+    /* Section main heading */
+    .neet-heading {
+        font-size: 1.3rem;
+        line-height: 1.25;
+    }
+
+    /* If heading becomes too long, clamp to 4 lines */
+    .neet-heading {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        /* max 4 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Adjust underline width visually */
+    .neet-heading-underline {
+        width: 35%;
+        border-width: 3px;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Left area */
+    .neet-left {
+        padding: 1rem 1rem;
+    }
+
+    /* Smaller left-title */
+    .neet-left-title {
+        font-size: 1.05rem;
+        line-height: 1.3;
+
+        /* Force ONLY 2 lines */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* **VERY IMPORTANT** */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Button smaller */
+    .neet-book-btn {
+        width: 9rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        margin-top: 0.4rem;
+    }
+
+    /* Reduce gap between text + image */
+    .neet-content {
+        gap: 1.2rem;
+    }
+
+    /* Image remains full-width */
+    .neet-image-wrapper img {
+        margin-top: 0.5rem;
+    }
+}
