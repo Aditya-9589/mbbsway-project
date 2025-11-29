@@ -1,0 +1,324 @@
+.book-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* UNIVERSAL ROW — USED BY ALL FIELDS */
+.form-row,
+.form-row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 16px);
+    margin-left: -16px;
+    margin-top: 4px;
+}
+
+.form-row>*,
+.form-row-2>* {
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+/* ONE CLEAN COLUMN RULE */
+.form-col {
+    width: 100%;
+    flex-grow: 0;
+    max-width: 100%;
+    position: relative;
+}
+
+/* LABELS */
+.form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* FORM CONTROL WRAPPER */
+.form-control,
+.select-control {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+/* MAIN FORM BACKGROUND */
+.book-form {
+    background-color: rgb(255, 249, 250);
+    padding: 16px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid rgb(198, 198, 198);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    background: white;
+    transition: 0.2s;
+    outline: none;
+}
+
+/* focus highlight */
+.form-input:focus {
+    border-color: rgb(17, 92, 142);
+}
+
+.select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 2px solid rgb(198, 198, 198);
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    appearance: none;
+}
+
+.form-select:focus {
+    border-color: rgb(17, 92, 142);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+}
+
+.textarea-wrapper {
+    border-radius: 10px;
+    padding: 14px 16px;
+    border: 2px solid rgb(198, 198, 198);
+    transition: 0.2s;
+    background: #fff;
+}
+
+.textarea-wrapper:focus-within {
+    border-color: rgb(17, 92, 142);
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    background: transparent;
+    color: #000;
+    padding: 0;
+}
+
+.submit-btn {
+    width: 12rem;
+    height: 4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to left, #115c8e, #f4829d) border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+    .submit-btn {
+        width: 15rem;
+    }
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to left, #115c8e, #f4829d);
+    color: #fff;
+}
+
+.book-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.book-container {
+    width: 100%;
+    margin: 3rem auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media (min-width: 600px) {
+    .book-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.book-gradient-border {
+    position: absolute;
+    top: -0.9rem;
+    bottom: -1rem;
+    right: -0.8rem;
+    width: 80%;
+    height: 103%;
+    z-index: -1;
+
+    border: 7px solid transparent;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(to top, rgb(17, 92, 142), rgb(244, 130, 157)) border-box;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(255, 249, 250);
+}
+
+.book-form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.book-form-bg {
+    background-color: rgb(255, 249, 250);
+    padding: 16px;
+    height: 100%;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.book-info {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 249, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-info-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 2px solid rgb(17, 92, 142);
+    background-color: rgb(252, 225, 234);
+    padding: 1.2rem;
+}
+
+.stats-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-top: 10px;
+}
+
+.stat {
+    text-align: center;
+    color: rgb(17, 92, 142);
+}
+
+.stat-num {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(17, 92, 142);
+}
+
+.contact-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 1.3rem 0 0.9rem 0;
+}
+
+.contact-item img {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.contact-item img.large {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contact-item p,
+.contact-item p.alt {
+    margin: 0;
+    color: rgb(234, 36, 79);
+    font-weight: 500;
+    width: 70%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 600px) {
+
+    .contact-item p,
+    .contact-item p.alt {
+        font-size: 1rem;
+    }
+}
+
+.doctor-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    height: 10rem;
+}
+
+.doctor-img-inner {
+    width: 85%;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-img-box img {
+    width: 100%;
+    max-width: 300px;
+}
