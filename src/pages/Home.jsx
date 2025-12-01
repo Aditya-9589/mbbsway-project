@@ -10,6 +10,9 @@ import AdmissionSlider from '../components/AdmissionSlider'
 import ServicesOffering from '../components/home/ServicesOffering'
 import NeetConsultancy from '../components/home/NeetConsultancy'
 import WorkflowSection from '../components/home/WorkflowSection'
+import BookConsultation from '../components/home/BookConsultation'
+import Testimonials from "../components/home/Testimonials"
+import ServicesPackages from "../components/home/ServicePackages"
 
 
 const Home = () => {
@@ -21,7 +24,7 @@ const Home = () => {
         <div className="min-h-screen bg-white text-gray-900">
             <LayoutHeader />
 
-            {/* 2️⃣ The shared parent wrapper */}
+            {/* 2 The shared parent wrapper */}
             <div className="w-full">
 
                 {/* HeroSlider */}
@@ -47,6 +50,12 @@ const Home = () => {
             <NeetConsultancy />
 
             <WorkflowSection />
+
+            <BookConsultation />
+
+            <Testimonials />
+
+            <ServicesPackages />
 
         </div>
     )

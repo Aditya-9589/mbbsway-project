@@ -1,0 +1,192 @@
+/* SECTION */
+.packages-section {
+    background: #fff;
+    margin: 3rem 0rem;
+    padding: 0rem 5rem;
+}
+
+.packages-container {
+    width: 100%;
+    padding: 0rem;
+}
+
+.packages-top-wrapper {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.packages-cards-wrapper {
+    width: 100%;
+}
+
+
+.packages-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.packages-underline {
+    width: 200px;
+    height: 4px;
+    background: #ea244f;
+    margin-left: 10rem;
+}
+
+/* GRID */
+.packages-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* CARD */
+.package-card {
+    flex: 1;
+    border: 2px solid #b1b1b1;
+    border-radius: 1rem;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    outline: 0px solid transparent;
+    background: #fff;
+}
+
+.package-card:hover {
+    /* border: 2px solid #f4829d; */
+    /* transform: translateY(-4px); */
+    /* border: 4px solid #115c8e; */
+
+    outline: 4px solid #115c8e;
+    outline-offset: -4px;
+    /* transform: translateY(-4px); */
+}
+
+.card-header {
+    text-align: center;
+    /* padding: 2rem 1rem 1.5rem; */
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.package-card:hover .card-header {
+    background: linear-gradient(180deg, #115c8e, #f4829d);
+}
+
+.package-card:hover .card-desc, 
+.package-card:hover .card-price {
+    color: #fff;
+}
+
+.card-plan-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card-plan {
+    background: linear-gradient(to top, #f4829d, #115c8e);
+    padding: 0.7rem 3rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card-desc {
+    color: #000;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.card-price-box {
+    margin-top: 1rem;
+}
+
+.card-price {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-features {
+    padding: 1.5rem 2rem;
+}
+
+.feature-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.tick-box {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.tick-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BUTTON */
+.package-btn {
+    margin: 1rem auto 2rem;
+    display: block;
+    background: linear-gradient(90deg, #115c8e, #f4829d);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.package-btn:hover {
+    opacity: 0.9;
+}
+
+.feature-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-button-box {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .packages-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .packages-container {
+        padding: 0 1.5rem;
+    }
+
+    .packages-heading {
+        font-size: 2rem;
+    }
+
+    .package-card {
+        padding-bottom: 1rem;
+    }
+
+    .package-price {
+        font-size: 1.6rem;
+    }
+}
