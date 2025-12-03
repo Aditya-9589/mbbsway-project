@@ -13,6 +13,7 @@ import WorkflowSection from '../components/home/WorkflowSection'
 import BookConsultation from '../components/home/BookConsultation'
 import Testimonials from "../components/home/Testimonials"
 import ServicesPackages from "../components/home/ServicePackages"
+import AchievementsSection from "../components/home/AchievementsSection"
 
 
 const Home = () => {
@@ -56,6 +57,8 @@ const Home = () => {
             <Testimonials />
 
             <ServicesPackages />
+
+            <AchievementsSection />
 
         </div>
     )

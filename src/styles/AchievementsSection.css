@@ -1,0 +1,145 @@
+/* ------------------------------------
+   Achievements Section Background
+------------------------------------ */
+.achievements-section {
+    padding-bottom: 2rem;
+    background: url("https://mbbsway.in/static/media/homeachivbanner.e52f241396be0af9b2b5.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------------------------
+   Container
+------------------------------------ */
+.achievements-container {
+    /* width: 85%; */
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 5rem;
+    gap: 1.6rem;
+}
+
+/* ------------------------------------
+   Heading
+------------------------------------ */
+.achievements-heading {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin-top: 1.2rem;
+}
+
+/* ------------------------------------
+   Heading Underline (EXACT MATCH)
+------------------------------------ */
+.heading-underline {
+    width: 39rem;
+    height: 4px;
+    background: #FF0000;
+    margin-left: 26rem;
+}
+
+/* ------------------------------------
+   Grid Wrapper
+------------------------------------ */
+.achievements-grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------------------
+   Each Card Wrapper
+------------------------------------ */
+.achievement-card-wrapper {
+    flex: 0 0 20%;
+    /* 5 cards in 1 row EXACTLY like screenshot */
+    max-width: 20%;
+    padding-top: 1rem;
+    padding-left: 0.8rem;
+}
+
+/* ------------------------------------
+   Card Box
+------------------------------------ */
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ------------------------------------
+   Icon Wrapper
+------------------------------------ */
+.achievement-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    /* margin-bottom: 1rem; */
+}
+
+/* ------------------------------------
+   Number Text
+------------------------------------ */
+.achievement-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 0.2rem;
+}
+
+/* ------------------------------------
+   Title Text
+------------------------------------ */
+.achievement-title {
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+
+/* ============================================================
+   TABLETS & MEDIUM SCREENS (≤ 1200px)
+============================================================ */
+@media (max-width: 1200px) {
+
+    /* Container padding */
+    .achievements-container {
+        padding: 0 1rem;
+    }
+
+    /* Make background taller so icons fit comfortably */
+    .achievements-section {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        /* increased height */
+        background-size: cover;
+    }
+
+    /* Hide underline */
+    .heading-underline {
+        display: none;
+    }
+
+    /* 3 cards in a row */
+    .achievement-card-wrapper {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    /* Make icons bigger for tablet view */
+    .achievement-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    /* Adjust number font size */
+    .achievement-number {
+        font-size: 1.6rem;
+    }
+}
