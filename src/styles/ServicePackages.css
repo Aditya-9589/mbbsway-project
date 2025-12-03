@@ -27,23 +27,24 @@
 }
 
 .packages-underline {
-    width: 200px;
+    width: 180px;
     height: 4px;
     background: #ea244f;
-    margin-left: 10rem;
+    margin-left: 9.8rem;
 }
 
 /* GRID */
 .packages-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
+    display: grid;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    grid-template-columns: repeat(3, 1fr);
 }
 
 /* CARD */
 .package-card {
     flex: 1;
-    border: 2px solid #b1b1b1;
+    border: 2px solid #115c8e;
     border-radius: 1rem;
     padding: 0;
     overflow: hidden;
@@ -73,7 +74,7 @@
     background: linear-gradient(180deg, #115c8e, #f4829d);
 }
 
-.package-card:hover .card-desc, 
+.package-card:hover .card-desc,
 .package-card:hover .card-price {
     color: #fff;
 }
@@ -91,16 +92,26 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: #fff;
+    margin: 1rem 0rem;
 }
 
 .card-desc {
     color: #000;
-    font-size: 1.1rem;
-    margin-top: 1rem;
+    font-size: 1rem;
+    /* font-weight: 100 !important; */
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* show only 2 lines */
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+
 .card-price-box {
-    margin-top: 1rem;
+    margin: 0.5rem 0rem;
 }
 
 .card-price {
@@ -110,14 +121,14 @@
 }
 
 .card-features {
-    padding: 1.5rem 2rem;
+    padding: 0rem 0.8rem;
 }
 
 .feature-row {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.4rem;
     align-items: flex-start;
-    margin-bottom: 1rem;
+    margin-top: 0.8rem;
 }
 
 .tick-box {
@@ -134,21 +145,37 @@
 
 /* BUTTON */
 .package-btn {
-    margin: 1rem auto 2rem;
+    position: relative;
+    margin: 1rem auto 1rem;
     display: block;
-    background: linear-gradient(90deg, #115c8e, #f4829d);
-    color: #fff;
+    /* background: linear-gradient(90deg, #115c8e, #f4829d); */
+    /* color: #fff; */
+    background: #fff;
+    color: #000;
     border: none;
     border-radius: 8px;
     padding: 0.75rem 2rem;
     font-size: 1.1rem;
     cursor: pointer;
+
+    background-image: linear-gradient(#fff, #fff),
+        linear-gradient(90deg, #115c8e, #f4829d);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
     transition: 0.2s ease;
 }
 
-.package-btn:hover {
-    opacity: 0.9;
+.package-card:hover .package-btn {
+    background: linear-gradient(90deg, #115c8e, #f4829d),
+        linear-gradient(90deg, #115c8e, #f4829d);
+    color: #fff;
+    border: 2px solid transparent;
 }
+
+/* .package-btn:hover {
+    opacity: 0.9;
+} */
 
 .feature-text {
     font-size: 1.1rem;
@@ -161,32 +188,99 @@
 
 .card-button-box {
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media(min-width: 1300px) {
+    .packages-cards-wrapper {
+        padding: 0rem 4rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .packages-section {
+        padding: 0rem 1rem;
+    }
+}
+
+@media(max-width: 900px) and (min-width: 600px) {
     .packages-grid {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .package-card {
+        width: 90%;
+        max-width: 24rem;
     }
 }
 
 @media (max-width: 600px) {
+
+    /* SECTIOn PADDING */
+    .packages-section {
+        padding: 0rem 0.8rem;
+    }
+
     .packages-container {
-        padding: 0 1.5rem;
+        padding: 0rem;
     }
 
     .packages-heading {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .packages-underline {
+        width: 120px;
+        height: 3px;
+        margin-left: 6.6rem;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     .package-card {
-        padding-bottom: 1rem;
+        padding-bottom: 0.6rem;
+        border-width: 1.5px;
+        border-radius: 12px;
     }
 
-    .package-price {
+    .card-header {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+
+    .card-desc {
+        font-size: 0.9rem;
+    }
+
+    .card-price {
         font-size: 1.6rem;
+    }
+
+    .card-features {
+        padding: 0rem 0.5rem;
+    }
+
+    .feature-text {
+        font-size: 0.95rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .tick-box {
+        width: 18px;
+        height: 18px;
+    }
+
+    .package-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
     }
 }
