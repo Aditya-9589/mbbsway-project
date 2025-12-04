@@ -51,6 +51,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* ------------------------------------
@@ -108,17 +109,18 @@
 ============================================================ */
 @media (max-width: 1200px) {
 
+    /* Make background taller so icons fit comfortably */
+    .achievements-section {
+        /* padding-top: 3rem; */
+        /* increased height */
+        padding-bottom: 2rem;
+        background-size: cover;
+        min-height: 34rem;
+    }
+
     /* Container padding */
     .achievements-container {
         padding: 0 1rem;
-    }
-
-    /* Make background taller so icons fit comfortably */
-    .achievements-section {
-        padding-top: 3rem;
-        padding-bottom: 4rem;
-        /* increased height */
-        background-size: cover;
     }
 
     /* Hide underline */
@@ -126,10 +128,15 @@
         display: none;
     }
 
+    .achievements-grid {
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+    }
+
     /* 3 cards in a row */
     .achievement-card-wrapper {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
     }
 
     /* Make icons bigger for tablet view */
@@ -141,5 +148,59 @@
     /* Adjust number font size */
     .achievement-number {
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    /* Reduce heading size + clamp to lines + ...  */
+    .achievements-heading {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        max-width: 90%;
+        margin: 0 auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        text-align: left;
+    }
+
+    /* Underline stays hidden  */
+    .heading-underline {
+        display: none !important;
+    }
+
+    /* Background should stretch for 3 rows of icons */
+    .achievements-section {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        min-height: 36rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .achievement-card-wrapper {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        padding-left: 0.8rem;
+        padding-top: 1.2rem;
+    }
+
+    .achievement-icon {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+
+    .achievement-number {
+        font-size: 1.3rem;
+        margin-top: 0.3rem;
+    }
+
+    .achievement-title {
+        font-size: 0.9rem;
+        line-height: 1.3;
     }
 }
