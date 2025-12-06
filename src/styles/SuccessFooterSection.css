@@ -3,65 +3,135 @@
     background: #3F96CF;
     width: 100%;
     /* padding-bottom: 3rem; */
+    margin-top: 10rem;
+    min-height: 30rem;
 }
 
 /* ---------------- TOP SECTION ---------------- */
 .success-top {
     /* background: linear-gradient(90deg, #3f5efb, #fc466b); */
     background: linear-gradient(90deg, #135C8E, #F4829D);
-    border-radius: 14px;
-    padding: 2rem 3rem;
+    border-radius: 0.6rem;
+    padding: 1.8rem 1.8rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 2rem;
-    width: 92%;
+
+    /* margin: 2rem 2rem; */
+    /* width: 80%;
+    max-width: 1200px;
+    margin: 0rem auto; */
+
+    width: 76rem;
+    min-height: 12rem;
+    /* max-width: 1200px; */
+    margin: 0rem auto;
+
+    /* margin-top: -2rem; */
+    position: relative;
+    top: -5.6rem;
 }
 
 .success-left img {
-    width: 380px;
+    width: 24rem;
 }
 
 .success-right {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.right-content {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
-    text-align: left;
 }
+
+.right-image img {
+    width: 120px;
+    height: auto;
+}
+
 
 .success-heading {
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
 }
 
 .success-heading span {
-    color: #ffdede;
+    color: #fff;
     font-weight: 700;
+    border-bottom: 4px solid #FF0000;
 }
+
+/* .success-underline {
+    width: 12rem;
+    height: 4px;
+    background: #FF0000;
+    margin-left: 20rem;
+} */
 
 .callback-form {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .callback-form input {
     width: 260px;
     height: 48px;
     padding: 0 12px;
-    border-radius: 8px;
-    border: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
     font-size: 1rem;
+    outline: none;
+}
+
+.callback-form input:hover {
+    border: 1px solid #000;
+}
+
+.callback-form input:focus,
+.callback-form input:active {
+    outline: 2px solid #135C8E !important;
 }
 
 .callback-form button {
+    position: relative;
+    display: inline-block;
     width: 130px;
-    height: 48px;
-    background: white;
+    height: 50px;
+
+    /* FONT  */
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+
+    /* BASE WHITE LOOK  */
+    background: #fff;
+    color: #000;
     border-radius: 8px;
     border: none;
-    font-weight: 600;
-    cursor: pointer;
+
+    /* GRADIENT BORDER EFFECT  */
+    background-image: linear-gradient(#fff, #fff),
+        linear-gradient(90deg, #f4829d, #115c8e);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+
+    transition: 0.2s ease-in-out;
+}
+
+.callback-form button:hover {
+    background: linear-gradient(90deg, #f4829d, #115c8e),
+        linear-gradient(90deg, #f4829d, #115c8e);
+    color: #fff;
+    border: 2px solid transparent;
 }
 
 .success-girl img {
@@ -72,84 +142,174 @@
 .footer-main {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 3rem;
+    /* padding-top: 2rem; */
     color: white;
-    gap: 2rem;
+    /* gap: 2rem; */
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -2rem;
 }
 
 /* ABOUT */
 .footer-about {
-    width: 26%;
+    width: 22%;
+
 }
+
+/* .footer-logo {
+    width: 160px;
+    align-items: center;
+    justify-content: center;
+} */
 
 .footer-logo {
     width: 160px;
+    display: flex;
+    /* enables centering */
+    justify-content: center;
+    /* centers horizontally */
+    align-items: center;
+    /* centers vertically */
+    margin: 0 auto;
+    /* optional: centers the whole block */
 }
+
 
 .footer-brands {
     display: flex;
+    align-items: center;
 }
+
 .footer-brands img {
-    width: 65px;
-    margin-right: 10px;
+    width: 3.8rem;
+    margin-right: 0.3rem;
+    transition: width 0.2s ease;
 }
 
 .footer-about-text {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     line-height: 1.4;
 }
 
+
 /* LINKS */
 .footer-links {
-    width: 18%;
+    width: 22%;
+}
+
+.footer-links h6 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 4px solid #fff;
+    margin-bottom: 1rem;
 }
 
 .footer-links h4 span {
-    border-bottom: 2px solid white;
+    border-bottom: none;
 }
 
 .footer-links ul {
-    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
     list-style: none;
     padding: 0;
     line-height: 2;
 }
 
+.footer-links ul li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+
 /* CONTACT */
 .footer-contact {
-    width: 26%;
+    width: 22%;
+}
+
+.footer-contact h6 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 4px solid #fff;
+    margin-bottom: 1rem;
 }
 
 .footer-contact h4 span {
-    border-bottom: 2px solid white;
+    border-bottom: none;
 }
 
 .footer-icon-line {
-    margin: 0.6rem 0;
-    line-height: 1.4;
+    margin-bottom: 0.6rem;
+    /* line-height: 1.4; */
+    font-size: 1rem;
 }
 
+
 /* FEEDBACK */
+.footer-feedback-wrapper {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #000; */
+    /* padding: 1.5rem 0; */
+}
+
 .footer-feedback {
-    width: 26%;
+    width: 100%;
     background: #fff;
     color: #000;
     border-radius: 1.2rem;
+    padding: 0.8rem 1rem;
+}
+
+.feedback-box-wrapper {
+    border: 1px solid #000;
+    border-radius: 8px;
 }
 
 .feedback-box {
     display: flex;
-    margin: 1rem 0;
-    background: white;
-    padding: 0.3rem;
+    align-items: center;
+    background: #fff;
     border-radius: 8px;
+    padding: 0rem 0.4rem;
+    width: 100%;
+    max-width: 260px;
+    /* matches your input size */
+    /* height: 48px; */
+    height: 3rem;
+    overflow: hidden;
+    /* prevents image from popping out */
 }
 
+/* INPUT */
 .feedback-box input {
-    border: none;
     flex: 1;
-    padding: 0.6rem;
-    border-radius: 6px;
+    height: 100%;
+    border: none;
+    outline: none;
+    /* padding: 0 12px; */
+    font-size: 1rem;
+}
+
+/* ARROW IMAGE */
+.feedback-box img {
+    height: 100%;
+    /* fill full height of box */
+    width: auto;
+    /* scale automatically */
+    cursor: pointer;
+    object-fit: contain;
+    /* keeps proportions clean */
+    padding: 0.4rem;
+    /* optional spacing */
+}
+
+
+.footer-feedback h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .feedback-box button {
@@ -163,7 +323,11 @@
 
 .footer-social {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
 }
+
 /* Social Icons */
 .footer-social span {
     font-size: 1.6rem;
@@ -172,50 +336,412 @@
     /* display: flex; */
 }
 
-/* Apps */
-.footer-apps img {
-    /* width: 50px; */
-    /* margin-top: 0.5rem; */
+
+.footer-feedback h5 {
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
+/* Apps */
+.footer-apps {
+    display: flex;
+    gap: 0.6rem;
+    /* space between the two icons */
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0.8rem;
+}
+
+.footer-apps img {
+    height: 2rem;
+    /* reduce height so they fit */
+    width: 7rem;
+    /* maintain original proportions */
+    object-fit: contain;
+    cursor: pointer;
+    margin-right: 0.6rem;
+}
+
+
 /* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 1000px) {
+
+
+@media (max-width: 1600px) {
+    .footer-brands img {
+        width: clamp(2.6rem, 3vw, 3.6rem);
+    }
+
+    .footer-apps img {
+        width: clamp(4.5rem, 6vw, 6.5rem);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .footer-main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .success-top {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        gap: 1rem;
     }
 
     .success-left img {
-        width: 260px;
-    }
-}
-
-@media (max-width: 800px) {
-    .footer-main {
-        flex-direction: column;
-    }
-
-    .footer-about,
-    .footer-links,
-    .footer-contact,
-    .footer-feedback {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .callback-form {
-        flex-direction: column;
-    }
-
-    .callback-form input,
-    .callback-form button {
-        width: 100%;
+        width: 18rem;
+        height: 5rem;
     }
 
     .success-heading {
+        font-size: 2rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    .success-heading span {
+        color: #fff;
+        font-weight: 700;
+        border-bottom: 3px solid #FF0000;
+    }
+
+
+    .callback-form {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+
+    .callback-form input {
+        width: 220px;
+        height: 40px;
+        padding: 0 6px;
+        border-radius: 3px;
+        border: 2px solid #fff;
+        font-size: 0.8rem;
+        outline: none;
+    }
+
+
+    .callback-form button {
+        width: 90px;
+        height: 42px;
+
+        /* FONT  */
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+
+    .success-girl img {
+        width: 80px !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain;
+    }
+
+
+
+    .footer-brands img {
+        width: 2.4rem;
+        margin-right: 0.3rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    /* Make whole top section stack vertically */
+    .success-top {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0.8rem;
+        gap: 1.2rem;
+        text-align: center;
+        gap: 1rem;
+        margin: 0rem 1rem;
+    }
+
+    /* SUCCESS LEFT — full width row */
+    .success-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .success-left img {
+        width: 14rem;
+    }
+
+    /* Right block — becomes horizontal row (text + girl) */
+    .success-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        flex-wrap: nowrap;
+    }
+
+    .right-content {
+        /* text-align: left; */
+        /* looks better */
+        /* max-width: 60%; */
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: left;
+    }
+
+    .success-heading {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .right-image img {
+        width: 90px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    /* Callback form moves to new row (full width) */
+    .callback-form {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .callback-form input {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .callback-form button {
+        width: 130px;
+    }
+
+
+    /* MAIN FOOTER LAYOUT → COLUMN */
+    .footer-main {
+        flex-direction: column;
+        /* stack all sections */
+        align-items: stretch;
+        /* each takes full width */
+        width: 94%;
+        margin: 0 1rem;
+        margin-top: 1rem;
+        /* gap: 1.5rem; */
+        /* space between stacked blocks */
+    }
+
+    /* Each section takes full row width */
+    .footer-about,
+    .footer-links,
+    .footer-contact,
+    .footer-feedback-wrapper {
+        width: 100%;
+    }
+
+    .footer-about {
+        justify-content: flex-start;
+    }
+
+    /* Center the brand logos & logo itself a bit nicer */
+    .footer-logo {
+        margin: 0 1rem;
+    }
+
+    .footer-brands {
+        justify-content: start;
+        gap: 0.4rem;
+    }
+
+    .footer-brands img {
+        width: 4rem;
+        margin-right: 0.3rem;
+        transition: width 0.2s ease;
+    }
+
+    .footer-links {
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* 2 columns */
+        gap: 0.4rem 1rem;
+        /* row-gap | column-gap */
+    }
+
+    .footer-links ul li {
+        margin: 0;
+        /* remove extra spacing */
+        font-size: 0.95rem;
+        /* width: 30%; */
+    }
+
+    .footer-contact {
+        margin-bottom: 1rem;
+    }
+
+
+    /* Text sizes slightly smaller for tablet */
+    .footer-about-text,
+    .footer-links ul li,
+    .footer-contact .footer-icon-line {
+        font-size: 0.95rem;
+    }
+
+    .footer-links h6,
+    .footer-contact h6 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Feedback block full width & centered */
+    .footer-feedback-wrapper {
+        justify-content: center;
+    }
+
+    .footer-feedback {
+        /* max-width: 420px; */
+        margin: 0 2rem;
+    }
+
+    .footer-feedback h4 {
+        font-size: 1.4rem;
+        /* border-bottom: 2px solid #000; */
+        margin: 0.5rem 0rem;
+    }
+
+    .footer-feedback h5 {
+        margin: 0.5rem 0rem;
+        font-size: 1.4rem;
+    }
+
+    .feedback-box-wrapper {
+        margin: 0.5rem 0rem;
+    }
+
+    .feedback-box {
+        max-width: 100%;
+        height: 2.8rem;
+    }
+
+    .feedback-box input {
+        font-size: 0.95rem;
+    }
+
+    /* Apps row – center under feedback */
+    .footer-apps {
+        justify-content: start;
+        margin: 0.5rem 0rem;
+    }
+
+    .footer-apps img {
+        height: 2.2rem;
+        width: 8rem;
+        object-fit: contain;
+    }
+
+    /* Social icons centered as well */
+    .footer-social {
+        justify-content: start;
+        gap: 0.6rem;
+    }
+
+    .footer-social span {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-feedback {
+        margin: 0rem;
+    }
+
+    /* MAIN CARD */
+    .success-top {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+
+    /* LEFT IMAGE ON TOP */
+    .success-left img {
+        width: 12rem;
+    }
+
+    /* CENTER SECOND ROW */
+    .success-right {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.6rem;
+        width: 100%;
+        position: relative;
+    }
+
+    /* --- HEADING: FORCE 2 LINES --- */
+    .success-heading {
         font-size: 1.6rem;
+        line-height: 1.25;
+        max-width: 220px;
+        /* THIS forces it to wrap into 2 lines */
+        word-break: keep-all;
+        white-space: normal;
+        /* allow wrapping */
+        text-align: left;
+    }
+
+    .success-heading span {
+        border-bottom: 3px solid #FF0000;
+    }
+
+    /* --- MOVE GIRL IMAGE UP --- */
+    .right-image img {
+        width: 70px !important;
+        flex-shrink: 0;
+        margin-top: -0.6rem;
+        /* Lifts image upward */
+        object-fit: contain;
+    }
+
+    /* CALLBACK FORM — FULL WIDTH BELOW */
+    .callback-form {
+        margin-top: 0.5rem;
+        /* flex-direction: column; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    /* INPUT SMALLER */
+    .callback-form input {
+        width: 60%;
+        flex-shrink: 1;
+        height: 2.3rem;
+        font-size: 0.8rem;
+        /* max-width: 14.2rem; */
+        /* font-size: 0.8rem; */
+        /* padding: 0 0.5rem; */
+    }
+
+    /* BUTTON SMALLER */
+    .callback-form button {
+        width: 28%;
+        flex-shrink: 1;
+        height: 2.3rem;
+        font-size: 0.8rem;
     }
 }
