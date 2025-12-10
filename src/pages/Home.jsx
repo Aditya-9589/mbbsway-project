@@ -14,7 +14,12 @@ import BookConsultation from '../components/home/BookConsultation'
 import Testimonials from "../components/home/Testimonials"
 import ServicesPackages from "../components/home/ServicePackages"
 import AchievementsSection from "../components/home/AchievementsSection"
+import ReviewsSection from '../components/home/ReviewsSection'
 import SuccessFooterSection from "../components/SuccessFooterSection"
+import FooterBottomNav from '../components/FooterBottomNav'
+import FooterBottomInfo from "../components/FooterBottomInfo"
+import FooterDevelopedBy from '../components/FooterDevelopedBy'
+import FloatingExtras from "../components/FloatingExtras"
 
 
 const Home = () => {
@@ -61,7 +66,17 @@ const Home = () => {
 
             <AchievementsSection />
 
+            <ReviewsSection />
+
             <SuccessFooterSection />
+
+            <FooterBottomNav />
+
+            <FooterBottomInfo />
+
+            <FooterDevelopedBy />
+
+            <FloatingExtras />
 
         </div>
     )

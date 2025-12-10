@@ -1,0 +1,609 @@
+/* ============================================================
+   WRAPPER
+============================================================ */
+.reviews-section-wrapper {
+    width: 100%;
+    background: #FFF9FA;
+    margin: 4rem 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.reviews-section-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADING
+============================================================ */
+.reviews-heading-wrapper {
+    margin: 1rem 0;
+}
+
+.reviews-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+
+
+/* ============================================================
+   TABS
+============================================================ */
+.reviews-tabs-wrapper {
+    width: 100%;
+}
+
+.reviews-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Left – Center – Right */
+    align-items: center;
+    min-height: 48px;
+}
+
+.reviews-tab-btn {
+    width: 220px;
+    height: 90px;
+    border-radius: 0.2rem;
+    background: #FFF9FA;
+    border: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    transition: all 0.25s ease;
+}
+
+.reviews-tab-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.reviews-tab-btn--active {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(to left, #115c8e, #f4829d) border-box;
+    border-color: transparent;
+}
+
+
+/* ============================================================
+   LAYOUT (LEFT PANEL + RIGHT PANEL)
+============================================================ */
+.reviews-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+/* LEFT */
+.reviews-left-panel {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+.reviews-rating {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.reviews-stars {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-basedon {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-platform-logo img {
+    width: 11rem;
+}
+
+
+
+/* ============================================================
+   RIGHT PANEL / SWIPER ZONE
+============================================================ */
+.reviews-right-panel {
+    width: 78%;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.reviews-swiper-wrapper {
+    width: 100%;
+    height: 22rem;
+    /* padding: 2rem 0; */
+    margin: 0rem 2rem;
+    position: relative;
+}
+
+.reviews-swiper {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+.reviews-swiper .swiper-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* ======================================================= */
+
+/* MAIN FIX */
+.swiper-wrapper {
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ============================================================
+   SLIDE BASE STRUCTURE
+============================================================ */
+.reviews-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .35s ease, opacity .35s ease;
+}
+
+
+/* ============================================================
+   OUTER GRADIENT WRAPPER
+============================================================ */
+.review-card-wrapper {
+    background: linear-gradient(0deg, #115c8e, #f4829d);
+    padding: 5px;
+    /* margin: 0.5rem; */
+    border-radius: 1rem;
+
+    /* SAME FOR ALL CARDS */
+    width: 20rem;
+    height: 17rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    transition: transform .35s ease, opacity .35s ease;
+}
+
+
+
+/* ============================================================
+   INNER WHITE CARD
+============================================================ */
+.review-card {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+    /* Slightly smaller so gradient shows fully */
+    padding: 0.9rem;
+    border: 1px solid #e5e7eb;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+
+
+/* ============================================================
+   ACTIVE SLIDE — CENTER CARD
+============================================================ */
+
+
+/* ACTIVE SLIDE — THE ONLY WORKING METHOD */
+.reviews-swiper .swiper-slide-active .review-card-wrapper {
+    transform: scale(1.25) !important;
+    opacity: 1;
+    z-index: 20;
+}
+
+/* Inner white card also scales a bit */
+.reviews-swiper .swiper-slide-active .review-card {
+    transform: scale(1.08) !important;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+}
+
+
+/* .reviews-swiper .swiper-slide-active .review-card {
+    transform: scale(1.05);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+} */
+
+
+/* ============================================================
+   NON-ACTIVE SLIDES — LEFT & RIGHT
+============================================================ */
+.reviews-swiper .swiper-slide:not(.swiper-slide-active) .review-card-wrapper {
+    transform: scale(0.84);
+    opacity: 0.85;
+}
+
+.reviews-swiper .swiper-slide:not(.swiper-slide-active) .review-card {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Subtle blur like MBBSWay */
+.reviews-swiper .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(0.3px);
+}
+
+
+/* ============================================================
+   CARD HEADER
+============================================================ */
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-card-user {
+    display: flex;
+    align-items: center;
+    /* gap: 1rem; */
+}
+
+.reviews-section-wrapper .review-user-img {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-user-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0rem 0.5rem;
+}
+
+.review-user-city {
+    font-size: .85rem;
+    color: #6b7280;
+    margin: 0rem 0.5rem;
+}
+
+.review-card-header .review-google-icon {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin: 0.4rem 0.6rem !important;
+}
+
+
+/* ============================================================
+   REVIEW TEXT
+============================================================ */
+.review-card-text {
+    margin-top: 1rem;
+    font-size: .8rem;
+    color: #000;
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   SWIPER NAVIGATION BUTTONS — MATCHED EXACTLY TO WEBSITE
+============================================================ */
+.reviews-section-wrapper .swiper-button-prev,
+.reviews-section-wrapper .swiper-button-next {
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #115c8e, #f4829d);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 20;
+}
+
+.reviews-section-wrapper .swiper-button-prev::after,
+.reviews-section-wrapper .swiper-button-next::after {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+.reviews-section-wrapper .swiper-button-prev {
+    left: 2.8rem !important;
+    /* move left/right */
+}
+
+.reviews-section-wrapper .swiper-button-next {
+    right: 2.8rem !important;
+}
+
+.reviews-section-wrapper .swiper-button-prev,
+.reviews-section-wrapper .swiper-button-next {
+    top: 40% !important;
+    /* change 45 - 60% to move up/down */
+}
+
+@media(max-width: 1200px) {
+    .reviews-section-container {
+        padding: 0rem 1rem;
+    }
+}
+
+/* ===============================
+   RESPONSIVE — BELOW 900px
+================================ */
+@media (max-width: 900px) {
+    .reviews-layout {
+        flex-direction: column;
+        /* stack vertically */
+        /* align-items: center; */
+        gap: 1.5rem;
+    }
+
+    .reviews-left-panel {
+        width: 100%;
+        /* text-align: center; */
+        /* align-items: center; */
+    }
+
+    .reviews-right-panel {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .swiper-wrapper {
+        margin-top: -60px;
+    }
+
+    .reviews-swiper-wrapper {
+        /* height: auto; */
+        /* min-height: 8rem; */
+        margin: 0;
+        width: 100%;
+    }
+
+    .review-card-wrapper {
+        width: 18rem;
+        /* slightly smaller for mobile */
+        /* height: auto; */
+    }
+
+    /* Shrink Review Tabs */
+    .reviews-tab-btn {
+        width: 180px;
+        height: 70px;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .reviews-tab-btn img {
+        transform: scale(0.8);
+    }
+
+
+
+    /* ------------------------------------------------------------- */
+
+    /* Hide left + right swiper slides */
+    /* .reviews-swiper .swiper-slide {
+        opacity: 0 !important;
+        pointer-events: none;
+        transform: scale(0.6) !important;
+    } */
+
+    /* Show ONLY the active (center) card */
+    /* .reviews-swiper .swiper-slide-active {
+        opacity: 1 !important;
+        pointer-events: auto;
+        transform: scale(1) !important;
+        filter: none !important;
+    } */
+
+    /* Ensure wrapper height shrinks to one card */
+    /* .reviews-swiper-wrapper {
+        height: 18rem;
+    } */
+
+    /* Disable blur on mobile */
+    /* .reviews-swiper .swiper-slide {
+        filter: none !important;
+    } */
+
+
+    /* -------------------------------------------------- */
+
+    /* Add padding so outer cards get cut by container */
+    /* .reviews-swiper-wrapper {
+        overflow: hidden;
+        padding: 0 2rem;  adjust to control how much left & right card shows 
+        height: 20rem;
+    } */
+
+    /* Center card */
+    /* .reviews-swiper .swiper-slide-active .review-card-wrapper {
+        transform: scale(1.15) !important;
+        opacity: 1;
+    } */
+
+    /* Side cards = slightly visible, smaller */
+    /* .reviews-swiper .swiper-slide:not(.swiper-slide-active) .review-card-wrapper {
+        transform: scale(0.75) !important;
+        opacity: 0.4 !important;
+    } */
+
+    /* Remove blur on small screens */
+    /* .reviews-swiper .swiper-slide {
+        filter: none !important;
+    } */
+
+    /* Adjust spacing between slides */
+    /* .reviews-swiper .swiper-slide {
+        transition: all 0.3s ease;
+    } */
+
+}
+
+/* ============================================================
+   BELOW 780px — SMALLER CARD SIZE + CONTENT SHRINK
+============================================================ */
+@media (max-width: 780px) {
+
+    /* Card outer wrapper */
+    .review-card-wrapper {
+        width: 12rem !important;
+        /* smaller width */
+        height: 14rem !important;
+        /* height still > width */
+        padding: 4px !important;
+    }
+
+    /* Inner white card */
+    .review-card {
+        padding: 0.6rem !important;
+        border-radius: 0.7rem !important;
+    }
+
+    /* User Image (Avatar) */
+    .reviews-section-wrapper .review-user-img {
+        width: 2.6rem !important;
+        height: 2.6rem !important;
+    }
+
+    /* User Name */
+    .review-user-name {
+        font-size: 0.85rem !important;
+    }
+
+    /* City */
+    .review-user-city {
+        font-size: 0.75rem !important;
+    }
+
+    /* Google/Facebook/Instagram small icon */
+    .review-card-header .review-google-icon {
+        width: 0.8rem !important;
+        height: 0.8rem !important;
+    }
+
+    /* Review text */
+    .review-card-text {
+        font-size: 0.72rem !important;
+        line-height: 1.3 !important;
+        margin-top: 0.6rem !important;
+    }
+
+    /* Active slide scaling reduced slightly */
+    .reviews-swiper .swiper-slide-active .review-card-wrapper {
+        transform: scale(1.18) !important;
+    }
+
+    /* Non-active slides even smaller */
+    .reviews-swiper .swiper-slide:not(.swiper-slide-active) .review-card-wrapper {
+        transform: scale(0.70) !important;
+        opacity: 0.4 !important;
+    }
+
+    /* Navigation buttons better positioned */
+    .reviews-section-wrapper .swiper-button-prev {
+        left: 1.5rem !important;
+    }
+
+    .reviews-section-wrapper .swiper-button-next {
+        right: 1.5rem !important;
+    }
+
+    .swiper-wrapper {
+        margin-top: 0px;
+    }
+}
+
+/* ============================================================
+   FINAL MOBILE BEHAVIOR — Below 600px
+============================================================ */
+@media (max-width: 600px) {
+
+    .swiper-wrapper {
+        margin-top: 0 !important;
+    }
+
+    /* Force swiper to show only one card */
+    .reviews-swiper .swiper-slide {
+
+
+        /* width: 100% !important; */
+        /* max-width: 100% !important; */
+
+        
+        display: flex !important;
+        justify-content: center !important;
+        /* CENTER THE CARD */
+    }
+
+    /* Active card becomes full-width hero */
+    .reviews-swiper .swiper-slide-active .review-card-wrapper {
+        width: 100% !important;
+        max-width: 20rem !important;
+        /* LIMIT TO LOOK GOOD ON MOBILE */
+        height: 18rem !important;
+
+        transform: scale(1) !important;
+        opacity: 1 !important;
+        margin: 0 auto !important;
+        /* CENTER FIX */
+    }
+
+    /* Hide other slides */
+    .reviews-swiper .swiper-slide:not(.swiper-slide-active) {
+        display: none !important;
+    }
+
+    /* Make container height auto */
+    .reviews-swiper-wrapper {
+        height: auto !important;
+        min-height: 18rem !important;
+        margin: 0 !important;
+    }
+
+    .reviews-swiper {
+        overflow: visible !important;
+    }
+
+    .review-card {
+        padding: 1rem !important;
+    }
+
+    .review-card-text {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .reviews-section-wrapper .review-user-img {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+}
+

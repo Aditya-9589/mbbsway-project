@@ -1,0 +1,77 @@
+/* OUTER WRAPPER */
+.developed-wrapper {
+    width: 100%;
+    background-color: #063B5B;
+    /* MBBSWAY blue */
+    /* padding: 0.8rem 0; */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* INNER CONTAINER */
+.developed-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    padding: 1rem 0rem;
+}
+
+
+/* LOGO */
+.developed-logo {
+    width: 28px;
+    height: 28px;
+}
+
+.developed-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    /* background-color: #063B5B; */
+    /* mix-blend-mode: multiply; */
+}
+
+
+/* TEXT */
+.developed-text {
+    color: #ffffff;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+
+/* ------------------------------------
+   RESPONSIVE (900px)
+------------------------------------ */
+@media (max-width: 900px) {
+    .developed-text {
+        font-size: 0.9rem;
+    }
+
+    .developed-logo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* ------------------------------------
+   SMALL MOBILE (600px)
+------------------------------------ */
+@media (max-width: 600px) {
+    .developed-container {
+        /* flex-direction: column; */
+        text-align: center;
+        /* gap: 0.4rem; */
+    }
+
+    .developed-text {
+        font-size: 0.85rem;
+        white-space: normal;
+        /* allow wrapping */
+        line-height: 1rem;
+    }
+}

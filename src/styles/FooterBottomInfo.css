@@ -1,0 +1,82 @@
+.footer-bottom-wrapper {
+    width: 100%;
+    background-color: #115C8E;
+    /* Same MBBSWAY theme */
+    padding: 0rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom-container {
+    width: 100%;
+    max-width: 1450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 0.5rem; */
+    margin: 1rem 0rem;
+
+    background-color: #115C8E;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-bottom-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.divider {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.footer-bottom-right p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .footer-bottom-wrapper {
+        padding: 0rem 0.6rem;
+        /* reduce vertical padding */
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        margin: 0.6rem 0rem;
+    }
+
+    .footer-bottom-links {
+        gap: 0.5rem;
+        /* smaller spacing between links */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-bottom-links a {
+        font-size: 0.9rem;
+        /* smaller link text */
+    }
+
+    .divider {
+        font-size: 0.9rem;
+        /* smaller divider */
+    }
+
+    .footer-bottom-right p {
+        font-size: 0.9rem;
+        /* smaller copyright text */
+    }
+}

@@ -1,0 +1,285 @@
+/* ---------------------------------------------------
+   COMMON GRADIENT STYLE
+--------------------------------------------------- */
+/* :root {
+    --mbbs-blue: #115c8e;
+    --mbbs-pink: #f4829d;
+    --mbbs-gradient: linear-gradient(to left, #115c8e, #f4829d);
+    --mbbs-font: "Montserrat", sans-serif;
+} */
+
+/* Reset just for these buttons */
+.admission-button,
+.floating-btn,
+.support-marquee-close {
+    /* font-family: var(--mbbs-font); */
+    font-family: "Montserrat", sans-serif;
+    border: none;
+}
+
+/* ---------------------------------------------------
+   ADMISSION 24–25 BUTTON (vertical on right)
+--------------------------------------------------- */
+
+.admission-button {
+    position: fixed;
+    /* position: sticky; */
+    right: -88px;
+    bottom: 15rem;
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14rem;
+    height: 3rem;
+    padding: 8px 22px;
+
+    transform: rotate(90deg);
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: linear-gradient(to left, #115c8e, #f4829d);
+
+    border-radius: 0 0 8px 8px;
+    border: 2px solid red;
+
+    cursor: pointer;
+    box-shadow:
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* ---------------------------------------------------
+   HELP & ALERTS FLOATING BUTTONS
+--------------------------------------------------- */
+
+.floating-btn {
+    position: fixed;
+    bottom: 3rem;
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    /* background: var(--mbbs-gradient); */
+    background: linear-gradient(to left, #115c8e, #f4829d);
+    color: #ffffff;
+    border-radius: 45%;
+    border: 2px solid red;
+
+    cursor: pointer;
+    box-shadow:
+        0 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0 6px 10px 0 rgba(0, 0, 0, 0.14),
+        0 1px 18px 0 rgba(0, 0, 0, 0.12);
+
+    text-transform: capitalize;
+    padding: 0;
+}
+
+.floating-btn span {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Help button – bottom-right */
+.floating-btn-help {
+    right: 10px;
+}
+
+/* Alerts button – bottom-left (slightly bigger) */
+.floating-btn-alerts {
+    left: 10px;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+
+
+/* ---------------------------------------------------
+   HELP & SUPPORT MARQUEE (fixed bottom bar)
+--------------------------------------------------- */
+
+.support-marquee {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 9999;
+    display: flex;
+    align-items: stretch;
+    height: 2rem;
+    /* default mobile height */
+}
+
+
+
+/* Left pink label */
+.support-marquee-label {
+    margin: 0;
+    /* background: var(--mbbs-pink); */
+    background: #f4829d;
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15%;
+    font-size: 0.8rem;
+    word-break: break-word;
+}
+
+
+
+/* Middle blue scrolling area */
+.support-marquee-track {
+    flex: 1;
+    /* background: var(--mbbs-blue); */
+    background: #115c8e;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 8px;
+}
+
+/* The actual scrolling text */
+.support-marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: #ffffff;
+    /* font-family: var(--mbbs-font); */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    /* Start off-screen to the right */
+    padding-left: 100%;
+    animation: marquee-scroll 20s linear infinite;
+}
+
+
+
+/* Close button on right */
+.support-marquee-close {
+    margin: 0 0 0 0;
+    padding: 0 0.5rem;
+
+    background: #115c8e;
+    color: #ffffff;
+    font-size: 1rem;
+    /* font-family: var(--mbbs-font); */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   MARQUEE ANIMATION
+--------------------------------------------------- */
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* Hide Admission button on screens < 900px */
+@media (max-width: 900px) {
+    .admission-button {
+        display: none;
+    }
+
+    .support-marquee {
+        height: 2.5rem;
+    }
+
+    .support-marquee-label {
+        width: 20%;
+        /* more space for text */
+        font-size: 0.55rem;
+        /* smaller text */
+        padding: 0 4px;
+        /* tighter padding */
+        white-space: nowrap;
+        /* keep in one line */
+    }
+
+    /* SCROLLING TEXT */
+    .support-marquee-text {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+}
+
+/* Adjust positions on wider screens */
+@media (max-width: 600px) {
+    .floating-btn-help {
+        right: 15px;
+    }
+
+    .floating-btn-alerts {
+        left: 15px;
+    }
+
+    /* Make the marquee slightly taller */
+    .support-marquee {
+        height: 2.3rem;
+    }
+
+    /* LEFT LABEL (pink) */
+    .support-marquee-label {
+        width: 25%;
+        /* fits mobile better */
+        font-size: 0.6rem;
+        /* slightly readable */
+        padding: 0 3px;
+    }
+
+    /* SCROLLING TEXT */
+    .support-marquee-text {
+        font-size: 0.65rem;
+    }
+
+    /* Adjust help/alerts button spacing */
+    .floating-btn-help {
+        right: 10px;
+    }
+
+    .floating-btn-alerts {
+        left: 10px;
+    }
+}

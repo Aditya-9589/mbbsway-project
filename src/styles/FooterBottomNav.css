@@ -1,0 +1,108 @@
+/* ------------------------------------------
+   OUTER WRAPPER (Full Width Background)
+-------------------------------------------*/
+.footer-nav-wrapper {
+    width: 100%;
+    background-color: #063B5B;
+    /* MBBSWAY Theme Blue */
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------------------
+   INNER CONTAINER (Centers Content)
+-------------------------------------------*/
+.footer-nav-container {
+    width: 100%;
+    max-width: 1450px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 0.5rem;
+
+    justify-content: space-between;
+    /* flex-direction: row; */
+}
+
+/* ------------------------------------------
+   GROUP OF 3 ITEMS
+-------------------------------------------*/
+.footer-nav-group {
+    display: flex;
+    justify-content: space-around;
+    width: 33.33%;
+    /* 3 equal groups in a row */
+
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+    /* flex-direction: row; */
+}
+
+/* ------------------------------------------
+   INDIVIDUAL ITEMS
+-------------------------------------------*/
+.footer-nav-item {
+    /* padding: 5px 10px; */
+}
+
+.footer-nav-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* .footer-nav-item p:hover {
+    text-decoration: underline;
+} */
+
+
+/* ------------------------------------------
+   RESPONSIVE BEHAVIOR
+-------------------------------------------*/
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+
+    /* Stack into 1 column */
+    .footer-nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* align-items: center; */
+        gap: 1rem;
+    }
+
+    .footer-nav-group {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+    .footer-nav-group {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+
+        /* align-items: center; */
+    }
+
+    .footer-nav-item {
+        padding: 5px;
+    }
+
+    .footer-nav-item p {
+        font-size: 13px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 450px) {
+    /* .footer-nav-item p {
+        font-size: 12px;
+    } */
+}
