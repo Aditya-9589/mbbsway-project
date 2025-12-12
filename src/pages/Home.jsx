@@ -15,6 +15,7 @@ import Testimonials from "../components/home/Testimonials"
 import ServicesPackages from "../components/home/ServicePackages"
 import AchievementsSection from "../components/home/AchievementsSection"
 import ReviewsSection from '../components/home/ReviewsSection'
+import Achievements from '../components/home/Achievements'
 import SuccessFooterSection from "../components/SuccessFooterSection"
 import FooterBottomNav from '../components/FooterBottomNav'
 import FooterBottomInfo from "../components/FooterBottomInfo"
@@ -67,6 +68,8 @@ const Home = () => {
             <AchievementsSection />
 
             <ReviewsSection />
+
+            <Achievements />
 
             <SuccessFooterSection />
 

@@ -109,6 +109,7 @@ const ServicesOffering = () => {
                     <div className="services-cards-area">
                         {/* Decorative curve behind cards */}
                         <div className="services-curve" />
+                        <div className="services-curve-second" />
 
                         <div className="services-cards-grid">
                             {services.map((service, index) => (
