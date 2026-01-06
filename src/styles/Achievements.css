@@ -1,5 +1,5 @@
 /* ===================================================================== */
-/*   ROOT SECTION (matches .achievements-slider-section)                 */
+/*   ROOT SECTION                                                        */
 /* ===================================================================== */
 
 .achievements-slider-section {
@@ -39,7 +39,7 @@
     font-size: 2.2rem;
 }
 
-/* Underline like original (.css-1dtrrn5) */
+/* Underline like original  */
 .achievements-slider-underline {
     border-bottom: 4px solid #ea244f;
     font-weight: 700;
@@ -50,7 +50,7 @@
 
 
 /* ===================================================================== */
-/*   DESCRIPTION (matches .css-14testc)                                  */
+/*   DESCRIPTION                                                         */
 /* ===================================================================== */
 
 .achievements-slider-description {
@@ -65,7 +65,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
-    /* same as site: 1 visible line */
 }
 
 
@@ -73,31 +72,18 @@
 /*   SET GLOBAL HEIGHT FOR BOTH SLIDERS                      */
 /* ========================================================= */
 
-/* .achievements-slider-normal,
-.achievements-slider-hover,
-.achievements-slider-normal .swiper,
-.achievements-slider-hover .swiper {
-    height: 260px !important;
-    max-height: 260px !important;
-    overflow: hidden !important;
-} */
-
-/* Fix parent wrapper height so Normal & Hover stay in SAME position */
+/* Fix parent wrapper height  */
 .achievements-slider-hover-zone {
     display: block;
     width: 100%;
-    /* height: 180px; */
     height: auto;
-    /* <-- This keeps layout stable */
     position: relative;
-
-    /* overflow: visible; */
     margin-top: 2rem;
 }
 
 
 /* ===================================================================== */
-/*   NORMAL SLIDER (top one – images + titles)                           */
+/*   NORMAL SLIDER (top one - images + titles)                           */
 /* ===================================================================== */
 
 /* Swiper shared container */
@@ -116,7 +102,6 @@
 /* Correct unified height for normal slider */
 .achievements-slider-normal .swiper {
     height: 11.4rem !important;
-    /* height: 24rem !important; */
 }
 
 /* Swiper wrapper */
@@ -139,7 +124,7 @@
 }
 
 
-/* Normal mode slides (like first swiper from site) */
+/* Normal mode slides  */
 .achievements-slider-normal .swiper-slide {
     width: 19rem !important;
     height: 13rem !important;
@@ -157,15 +142,13 @@
 }
 
 .achievements-slider-img {
-    /* width: 100%; */
-
     height: 17rem;
     width: 22rem;
     border-radius: 0.3rem;
     object-fit: cover;
 }
 
-/* Title under image (like .css-14w2zyn) */
+/* Title under image */
 .achievements-slider-title {
     margin: 0.5rem 0 0 0 !important;
     display: block;
@@ -180,24 +163,18 @@
 
 
 .achievements-slider-hover .swiper {
-    /* height: 20rem !important; */
     height: 11.4rem !important;
 }
 
 .achievements-slider-hover .swiper-wrapper {
-    /* height: 20rem !important; */
     box-sizing: initial;
     display: flex;
     position: relative;
     transition-property: transform;
     transition-timing-function: ease;
-    /* height: 11.4rem; */
     height: 12rem !important;
-    /* height: 24rem !important; */
-    /* width: 100%; */
     width: 18rem !important;
     align-items: center;
-    /* z-index: 1; */
     margin-top: 4.5rem;
 }
 
@@ -239,9 +216,6 @@
 
 /* Image inside each hover slide */
 .achievements-slider-hover-img {
-    /* width: 20rem; */
-    /* height: 17rem; */
-
     width: 100%;
     height: 100%;
     border-radius: 0.3rem;
@@ -249,7 +223,7 @@
 }
 
 /* ===================================================================== */
-/*   LAPTOP FRAME OVERLAY (matches .css-uru8kh)                          */
+/*   LAPTOP FRAME OVERLAY                          */
 /* ===================================================================== */
 
 .achievements-slider-laptop-frame {

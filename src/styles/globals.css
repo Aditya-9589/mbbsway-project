@@ -1,12 +1,12 @@
 /* ===============================
-   1️⃣ Tailwind Base Configuration
+    Tailwind Base Configuration
 ================================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ===============================
-   2️⃣ Root Variables
+    Root Variables
 ================================== */
 :root {
     color-scheme: light;
@@ -15,7 +15,7 @@
 }
 
 /* ===============================
-   3️⃣ Global Utility Classes
+    Global Utility Classes
 ================================== */
 
 /* 🔹 Primary Button */
@@ -45,12 +45,10 @@
 /* 🔹 Wide Container (for sections close to edges) */
 .container-wide {
     @apply mx-auto px-4;
-    /* Added padding for breathing room */
-    /* max-width: 1400px; */
 }
 
 /* ===============================
-   4️⃣ Swiper Customization (if used globally)
+    Swiper Customization (if used globally)
 ================================== */
 .swiper-pagination-bullet {
     background-color: #ccc !important;
@@ -62,7 +60,7 @@
 }
 
 /* ===============================
-    5️⃣ Optional Global Styles
+    Optional Global Styles
 ================================== */
 body {
     @apply bg-white text-gray-900 antialiased;

@@ -1,75 +1,49 @@
 import React from "react";
 import "../../styles/ServicePackages.css";
 
-const packages = [
-    {
-        plan: "PLAN A",
-        price: "8999/-",
-        desc: "Information Based Counselling - Access of all contents & video provided by us.",
-        features: [
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-        ],
-    },
-    {
-        plan: "PLAN B",
-        price: "22999/-",
-        desc: "Personalized Counselling - Access of all contents & video provided by us.",
-        features: [
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-        ],
-    },
-    {
-        plan: "PLAN C",
-        price: "79999/-",
-        desc: "Assured Counselling - Access of all contents & video provided by us.",
-        features: [
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-            "Score Based Analysis & Suggestions for Best Fit Colleges in your Rank.",
-        ],
-    },
-];
+const BASE_URL = "https://admin.mbbsway.in/storage/app/";
 
-const ServicePackages = () => {
+
+const ServicePackages = ({ packagesData }) => {
+
+    // Safety check 
+    if (!packagesData) return null;
+
+    const { title, packages = [] } = packagesData; 
+
     return (
         <section className="packages-section">
             <div className="packages-container">
 
                 {/* === FIRST DIV — Heading + Underline === */}
                 <div className="packages-top-wrapper">
-                    <h2 className="packages-heading">Service Packages</h2>
+                    <h2 className="packages-heading">{title}</h2>
                     <div className="packages-underline" />
                 </div>
 
                 {/* === SECOND DIV — Cards Wrapper === */}
                 <div className="packages-cards-wrapper">
                     <div className="packages-grid">
-                        {packages.map((item, i) => (
-                            <div className="package-card" key={i}>
+
+                        {packages.map((item) => (
+                            <div className="package-card" key={item.id}>
 
                                 {/* === CARD HEADER === */}
                                 <div className="card-header">
                                     <div className="card-plan-box">
-                                        <span className="card-plan">{item.plan}</span>
+                                        <span className="card-plan">{item.title}</span>
                                     </div>
 
-                                    <p className="card-desc">{item.desc}</p>
+                                    <p className="card-desc">{item.sub_title}</p>
 
                                     <div className="card-price-box">
-                                        <p className="card-price">{item.price}</p>
+                                        <p className="card-price">{item.price}/-</p>
                                     </div>
                                 </div>
 
                                 {/* === FEATURES === */}
                                 <div className="card-features">
-                                    {item.features.map((f, index) => (
+                                    {item.description.map((feature, index) => (
                                         <div className="feature-row" key={index}>
                                             <div className="tick-box">
                                                 <img
@@ -78,7 +52,7 @@ const ServicePackages = () => {
                                                     className="tick-icon"
                                                 />
                                             </div>
-                                            <p className="feature-text">{f}</p>
+                                            <p className="feature-text">{feature}</p>
                                         </div>
                                     ))}
                                 </div>

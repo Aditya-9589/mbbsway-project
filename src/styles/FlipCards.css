@@ -71,7 +71,6 @@
     height: 100%;
     backface-visibility: hidden !important;
     border-radius: 10px;
-    /* box-shadow: 0 3px 8px #000000; */
     padding: 1.5rem;
     text-align: center;
     display: flex;
@@ -144,7 +143,6 @@
     bottom: 0;
     height: 5px;
     width: 100%;
-    /* background: linear-gradient(to right, #115c8e, #f4829d); */
     background: #EA244F;
     border-radius: 2px;
 }

@@ -30,7 +30,6 @@
 
 .admission-swiper .swiper-slide {
     transition-duration: 300ms !important;
-    /* smoother, slower fade */
 }
 
 /* Set the overall slider height here */
@@ -50,7 +49,7 @@
     /* optional */
 }
 
-/* Arrow ICON itself (the < and >) */
+/* Arrow ICON  */
 .admission-swiper .swiper-button-prev::after,
 .admission-swiper .swiper-button-next::after {
     font-size: 2rem;
@@ -97,4 +96,32 @@
     .admission-swiper {
         --swiper-navigation-size: 22px !important;
     }
+}
+
+.admission-slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.admission-slide-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    color: #fff;
+    max-width: 80%;
+}
+
+.admission-slide-overlay h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.admission-slide-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
 }

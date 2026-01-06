@@ -55,39 +55,6 @@
 .infocard-hover:hover {}
 
 
-/* Responsive overrides */
-@media (max-width: 768px) {
-    .infocard-img {
-        height: 9.5rem;
-    }
-
-    .infocard-inner {
-        min-height: 18rem;
-        max-height: 18rem;
-    }
-
-    .infocard-desc {
-        -webkit-line-clamp: 4;
-        /* match desktop */
-    }
-}
-
-
-/* Ensure hover and normal card heights match */
-/* .hover-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: hidden;
-} */
-
-/* @media (max-width: 768px) {
-    .hover-card-wrapper {
-        height: 9.5rem;
-        Match mobile image height
-    }
-} */
-
 .hover-explore-btn {
     display: inline-block;
     padding: 8px 18px;
@@ -107,13 +74,6 @@
     color: #ffffff;
 }
 
-/* .hover-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    z-index: 20;
-} */ 
-
 /* Base Card Height — ensures both views match */
 .card-container {
     height: 26rem;
@@ -126,9 +86,24 @@
     transition: opacity 0.25s ease;
 }
 
-/* For mobile (smaller height) */
+/* Responsive overrides */
 @media (max-width: 768px) {
+
     .card-container {
         height: 20rem;
+    }
+
+    .infocard-img {
+        height: 9.5rem;
+    }
+
+    .infocard-inner {
+        min-height: 18rem;
+        max-height: 18rem;
+    }
+
+    .infocard-desc {
+        -webkit-line-clamp: 4;
+        /* match desktop */
     }
 }

@@ -6,7 +6,7 @@ const FloatingExtras = () => {
 
     return (
         <>
-            {/* Admission 24–25 (vertical on right side, desktop only) */}
+            {/* Admission */}
             <button className="admission-button">
                 Admission 24-25
             </button>
@@ -21,7 +21,7 @@ const FloatingExtras = () => {
                 <span>Alerts</span>
             </button>
 
-            {/* Help & Support Marquee (fixed bottom) */}
+            {/* Help & Support Marquee */}
             {showMarquee && (
                 <div className="support-marquee">
                     <p className="support-marquee-label">Help &amp; Support</p>

@@ -12,8 +12,6 @@
     padding: 1rem 2rem;
 }
 
-
-
 /* ================= GLOBAL LAYOUT ================= */
 
 .form-row {
@@ -42,12 +40,9 @@
 }
 
 /* MAIN FLEX WRAPPER */
-/* MAIN FLEX */
 .book-flex {
     display: flex;
     width: 100%;
-    /* gap: 2rem; */
-    /* align-items: stretch; */
     align-items: flex-start;
     background-color: #FFF9FA;
     border-radius: 0.4rem;
@@ -64,33 +59,6 @@
     flex: 1;
     display: flex;
 }
-
-/* On mobile → stack */
-@media (max-width: 900px) {
-    .book-flex {
-        flex-direction: column;
-    }
-}
-
-/* BOOK CONSULTATION – GRADIENT BORDER FRAME */
-.book-gradient-border {
-    /* position: absolute;
-    top: -40px;
-    right: -500px; */
-    /* shift to the right just like About section */
-    /* height: 30rem;
-    width: 100%;
-
-    border: 10px solid transparent;
-    border-radius: 16px;
-
-    background:
-        linear-gradient(#ffffff, #ffffff) padding-box,
-        linear-gradient(to top, #115c8e, #f4829d) border-box;
-
-    z-index: -1; */
-}
-
 
 /* ================= HEADING ================= */
 
@@ -111,24 +79,11 @@
     border-bottom: 3px solid #EA244F;
 }
 
-@media (min-width: 600px) {
-    .book-title {
-        font-size: 2.3rem;
-    }
-}
-
-
 /* ================= INPUT FIELDS ================= */
 
 .form-input,
 .form-select,
 .textarea-wrapper {
-    /* border-radius: 10px;
-    border: 2px solid transparent;
-    background:
-        linear-gradient(#fff, #fff) padding-box,
-        linear-gradient(to left, #115c8e, #f4829d) border-box;
-    transition: 0.3s ease; */
 
     border-radius: 10px;
     border: 2px solid grey;
@@ -153,7 +108,6 @@
 .textarea-wrapper:hover,
 .textarea-wrapper:focus-within {
     background-color: #FFF9FA;
-    /* background-color: #E6809C; */
     border-radius: 0px;
     border: 2px solid #E6809C;
 }
@@ -165,9 +119,7 @@
     width: 100%;
     padding: 14px 16px;
     font-size: 1rem;
-    /* background-color: #fff; */
     background-color: #FFF9FA;
-    /* background-color: #E6809C; */
     cursor: pointer;
     appearance: none;
 }
@@ -242,14 +194,10 @@
 .message-button-row {
     display: flex;
     align-items: flex-end;
-    /* Align button bottom */
-    /* gap: 1rem; */
 }
 
-/* Message width = same as other inputs */
 .message-col {
     flex: 1;
-    /* same width as normal form-col */
 }
 
 /* Button sits to the right */
@@ -283,8 +231,6 @@
 }
 
 
-
-/* ================= RIGHT SIDE INFO ================= */
 /* ================= RIGHT BOX WRAPPER ================= */
 
 .book-right {
@@ -363,13 +309,6 @@
     line-height: 1.3;
 }
 
-/* On bigger screens */
-@media (min-width: 600px) {
-    .contact-item p {
-        font-size: 1rem;
-    }
-}
-
 /* ================= DOCTOR IMAGE ================= */
 
 .doctor-img-box {
@@ -392,14 +331,8 @@
     object-fit: contain;
 }
 
-/* Slight padding fix on the right-side column */
-/* @media (max-width: 900px) {
-    .book-right {
-        padding-left: 0;
-        margin-top: 2rem;
-    }
-} */
 
+/* ================== RESPONSIVE: BELOW 1200PX ================== */
 
 @media (max-width: 1200px) {
     .book-container {
@@ -433,13 +366,11 @@
     .message-button-row {
         flex-direction: column;
         align-items: flex-start;
-        /* LEFT align */
     }
 
     .button-col {
         width: 100%;
         justify-content: flex-start !important;
-        /* LEFT aligned */
         margin-top: 1rem;
     }
 
@@ -458,14 +389,25 @@
     .book-right {
         width: 100% !important;
         flex: none !important;
-        /* remove flex:2 / flex:1 */
     }
 
-    /* Optional spacing */
+    .book-flex {
+        flex-direction: column;
+    }
+
     .book-right {
         margin-top: 1.5rem;
     }
-
-    /* Button full width optional (if you want) */
-    /* .submit-btn { width: 100%; } */
 }
+
+
+@media (min-width: 600px) {
+    .book-title {
+        font-size: 2.3rem;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+}
+

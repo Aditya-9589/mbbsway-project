@@ -10,7 +10,6 @@
 
 /* ---------------- TOP SECTION ---------------- */
 .success-top {
-    /* background: linear-gradient(90deg, #3f5efb, #fc466b); */
     background: linear-gradient(90deg, #135C8E, #F4829D);
     border-radius: 0.6rem;
     padding: 1.8rem 1.8rem;
@@ -19,17 +18,10 @@
     justify-content: space-between;
     align-items: center;
 
-    /* margin: 2rem 2rem; */
-    /* width: 80%;
-    max-width: 1200px;
-    margin: 0rem auto; */
-
     width: 76rem;
     min-height: 12rem;
-    /* max-width: 1200px; */
     margin: 0rem auto;
 
-    /* margin-top: -2rem; */
     position: relative;
     top: -5.6rem;
 }
@@ -69,12 +61,6 @@
     border-bottom: 4px solid #FF0000;
 }
 
-/* .success-underline {
-    width: 12rem;
-    height: 4px;
-    background: #FF0000;
-    margin-left: 20rem;
-} */
 
 .callback-form {
     display: flex;
@@ -157,12 +143,6 @@
 
 }
 
-/* .footer-logo {
-    width: 160px;
-    align-items: center;
-    justify-content: center;
-} */
-
 .footer-logo {
     width: 160px;
     display: flex;
@@ -174,7 +154,6 @@
     margin: 0 auto;
     /* optional: centers the whole block */
 }
-
 
 .footer-brands {
     display: flex;
@@ -222,7 +201,6 @@
     font-size: 1rem;
 }
 
-
 /* CONTACT */
 .footer-contact {
     width: 22%;
@@ -246,15 +224,12 @@
     font-size: 1rem;
 }
 
-
 /* FEEDBACK */
 .footer-feedback-wrapper {
     width: 22%;
     display: flex;
     justify-content: center;
     margin: 1rem 0rem;
-    /* border: 1px solid #000; */
-    /* padding: 1.5rem 0; */
 }
 
 .footer-feedback {
@@ -278,11 +253,8 @@
     padding: 0rem 0.4rem;
     width: 100%;
     max-width: 260px;
-    /* matches your input size */
-    /* height: 48px; */
     height: 3rem;
     overflow: hidden;
-    /* prevents image from popping out */
 }
 
 /* INPUT */
@@ -334,8 +306,6 @@
 .footer-social span {
     font-size: 1.6rem;
     justify-content: space-between;
-    /* margin-right: 0.8rem; */
-    /* display: flex; */
 }
 
 
@@ -488,9 +458,6 @@
     }
 
     .right-content {
-        /* text-align: left; */
-        /* looks better */
-        /* max-width: 60%; */
         flex: 1 1 auto;
         min-width: 0;
         text-align: left;

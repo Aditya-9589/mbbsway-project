@@ -1,18 +1,11 @@
 /* ---------------------------------------------------
    COMMON GRADIENT STYLE
 --------------------------------------------------- */
-/* :root {
-    --mbbs-blue: #115c8e;
-    --mbbs-pink: #f4829d;
-    --mbbs-gradient: linear-gradient(to left, #115c8e, #f4829d);
-    --mbbs-font: "Montserrat", sans-serif;
-} */
 
 /* Reset just for these buttons */
 .admission-button,
 .floating-btn,
 .support-marquee-close {
-    /* font-family: var(--mbbs-font); */
     font-family: "Montserrat", sans-serif;
     border: none;
 }
@@ -79,7 +72,6 @@
     width: 3.2rem;
     height: 3.2rem;
 
-    /* background: var(--mbbs-gradient); */
     background: linear-gradient(to left, #115c8e, #f4829d);
     color: #ffffff;
     border-radius: 45%;
@@ -106,13 +98,12 @@
     right: 10px;
 }
 
-/* Alerts button – bottom-left (slightly bigger) */
+/* Alerts button – bottom-left */
 .floating-btn-alerts {
     left: 10px;
     width: 3.5rem;
     height: 3.5rem;
 }
-
 
 
 /* ---------------------------------------------------
@@ -129,7 +120,6 @@
     display: flex;
     align-items: stretch;
     height: 2rem;
-    /* default mobile height */
 }
 
 
@@ -137,7 +127,6 @@
 /* Left pink label */
 .support-marquee-label {
     margin: 0;
-    /* background: var(--mbbs-pink); */
     background: #f4829d;
     color: #ffffff;
 
@@ -160,7 +149,6 @@
 /* Middle blue scrolling area */
 .support-marquee-track {
     flex: 1;
-    /* background: var(--mbbs-blue); */
     background: #115c8e;
     display: flex;
     align-items: center;
@@ -173,7 +161,6 @@
     display: inline-block;
     white-space: nowrap;
     color: #ffffff;
-    /* font-family: var(--mbbs-font); */
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -194,7 +181,6 @@
     background: #115c8e;
     color: #ffffff;
     font-size: 1rem;
-    /* font-family: var(--mbbs-font); */
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     line-height: 1.5;

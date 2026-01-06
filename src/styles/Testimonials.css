@@ -1,4 +1,5 @@
 /* SECTION WRAPPER */
+
 .testimonials-section {
     /* padding: 2rem 0; */
     background-color: #fff9fa;
@@ -34,28 +35,10 @@
     flex: 3;
     display: flex;
     justify-content: center;
-
-
     align-items: stretch;
-    /* align-items: center; */
+
 }
 
-/* Left 70%, Right 30% */
-/* .testimonials-left {
-    flex: 7;
-}
-.testimonials-right {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
-/* HEADING */
-/* .testimonials-heading-wrapper {
-    margin-bottom: 1.5rem;
-} */
 
 .testimonials-heading {
     margin: 0;
@@ -162,10 +145,6 @@
     font-weight: 400;
 }
 
-/* .testimonial-college,
-.testimonial-city {
-    font-size: 1rem;
-} */
 
 /* CONTROLS (dots + arrows) */
 .testimonial-controls {
@@ -219,10 +198,6 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* .testimonial-arrow:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-} */
 
 /* RIGHT SIDE – VIDEO */
 .testimonials-video-card {
@@ -234,10 +209,6 @@
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     background-color: #000;
-
-    /* background-color: #fff; */
-    /* padding-top: 1rem; */
-    /* padding-left: 1rem; */
     margin-left: 1rem;
 }
 
@@ -341,11 +312,6 @@
 
     /* Arrows move LEFT and align with dots */
     .testimonial-arrows {
-        /* margin-top: orem; */
-        /* margin-left: 0; */
-        /* justify-content: flex-start; */
-        /* LEFT SIDE */
-        /* width: 100%; */
 
         order: 1;
         display: flex;

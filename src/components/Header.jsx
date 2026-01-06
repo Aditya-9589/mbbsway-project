@@ -104,8 +104,7 @@ const Header = () => {
                 </div>
 
                 {/* ---------------- RIGHT: MOBILE CONTENT (<900px) ---------------- */}
-                {/* <div className="md:hidden flex items-center gap-3"> */}
-                    <div className="max-[900px]:flex hidden items-center gap-3">
+                <div className="max-[900px]:flex hidden items-center gap-3">
 
                     {/* Apply Now */}
                     <button

@@ -2,7 +2,10 @@ import React from "react";
 import "../styles/SuccessFooterSection.css";
 
 
-const SuccessFooterSection = () => {
+const SuccessFooterSection = ({ expertsData }) => {
+
+    if (!expertsData) return null;
+
     return (
         <div className="success-footer-wrapper">
 

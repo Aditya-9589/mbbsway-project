@@ -1,7 +1,15 @@
 import React from 'react';
 import "../../styles/BookConsultation.css";
 
-const BookConsultation = () => {
+const BASE_URL = "https://admin.mbbsway.in/storage/app/";
+
+const BookConsultation = ({ contactData }) => {
+
+    // Safety check 
+    if (!contactData) return null;
+
+    const { title, banner} = contactData;
+
     return (
         <section className="book-section">
             <div className="book-container">
@@ -23,6 +31,7 @@ const BookConsultation = () => {
                                         <div className="book-heading-wrapper">
                                             <h2 className="book-title">
                                                 Book a free <span className="highlight">Consultation</span>
+                                                {/* {title} */}
                                             </h2>
                                         </div>
 
@@ -135,7 +144,11 @@ const BookConsultation = () => {
                                 {/* Doctor Image */}
                                 <div className="doctor-img-box">
                                     <div className="doctor-img-inner">
-                                        <img src="https://mbbsway.in/static/media/homebookconsulationdr.3c9aa6b85318638b8ddd.png" alt="doctor" />
+                                        <img 
+                                            src="https://mbbsway.in/static/media/homebookconsulationdr.3c9aa6b85318638b8ddd.png"
+                                            // src={`${BASE_URL}${banner}`} 
+                                            alt="Consultation Doctor" 
+                                        />
                                     </div>
                                 </div>
 

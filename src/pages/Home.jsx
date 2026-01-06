@@ -1,4 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchHomeData } from '../features/home/homeSlice'
+
 import LayoutHeader from '../components/home/LayoutHeader'
 import HeroSlider from '../components/HeroSlider'
 import InfoCards from '../components/home/InfoCards'
@@ -12,7 +17,7 @@ import NeetConsultancy from '../components/home/NeetConsultancy'
 import WorkflowSection from '../components/home/WorkflowSection'
 import BookConsultation from '../components/home/BookConsultation'
 import Testimonials from "../components/home/Testimonials"
-import ServicesPackages from "../components/home/ServicePackages"
+import ServicePackages from "../components/home/ServicePackages"
 import AchievementsSection from "../components/home/AchievementsSection"
 import ReviewsSection from '../components/home/ReviewsSection'
 import Achievements from '../components/home/Achievements'
@@ -27,6 +32,24 @@ const Home = () => {
 
     const [stateIndex, setStateIndex] = useState(0);
 
+    const dispatch = useDispatch();
+
+    const { data, loading, error } = useSelector((state) => state.home);
+
+    useEffect(() => {
+        dispatch(fetchHomeData());
+    }, [dispatch]);
+
+    if (loading) {
+        return <div className="text-center py-20">Loading...</div>
+    }
+
+    if(error) {
+        return <div className="text-center py-20 text-red-500">{error}</div>
+    }
+
+    // console.log(data);
+
     return (
 
         <div className="min-h-screen bg-white text-gray-900">
@@ -36,46 +59,53 @@ const Home = () => {
             <div className="w-full">
 
                 {/* HeroSlider */}
-                <HeroSlider onStateChange={setStateIndex} />
+                <HeroSlider 
+                    sliders={data?.home_sliders1}
+                    states={data?.states}
+                    onStateChange={setStateIndex} 
+                />
 
                 {/* Info Cards */}
-                <InfoCards stateIndex={stateIndex} />
+                <InfoCards 
+                    states={data?.states}
+                    stateIndex={stateIndex} 
+                />
 
             </div>
 
-            <HomeCards />
+            <HomeCards topUniversities={data?.top_university} />
 
-            <FlipCards />
+            <FlipCards whyChooseUs={data?.why_choose_us?.why_choose_us} />
 
-            <AboutFormSection />
+            <AboutFormSection aboutUs={data?.about_us} />
 
-            <YouTube_Video />
+            <YouTube_Video video={data?.about_us} />
 
-            <AdmissionSlider />
+            <AdmissionSlider sliders={data?.home_sliders2} />
 
-            <ServicesOffering />
+            <ServicesOffering  servicesData={data?.services} />
 
-            <NeetConsultancy />
+            <NeetConsultancy bookNowData={data?.book_now} />
 
-            <WorkflowSection />
+            <WorkflowSection  workflowData={data?.works} />
 
-            <BookConsultation />
+            <BookConsultation contactData={data?.contacts} />
 
-            <Testimonials />
+            <Testimonials testimonialsData={data?.testimonials} />
 
-            <ServicesPackages />
+            <ServicePackages packagesData={data?.packages} />
 
-            <AchievementsSection />
+            <AchievementsSection countersData={data?.counters} />
 
-            <ReviewsSection />
+            <ReviewsSection reviewsData={data?.reviews} />
 
-            <Achievements />
+            <Achievements achievementsData={data?.achievment} />
 
-            <SuccessFooterSection />
+            <SuccessFooterSection expertsData={data?.experts} />
 
             <FooterBottomNav />
 
-            <FooterBottomInfo />
+            <FooterBottomInfo links={data?.useful_link} />
 
             <FooterDevelopedBy />
 

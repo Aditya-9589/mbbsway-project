@@ -42,10 +42,6 @@
 .workflow-grid-item {
     display: flex;
     justify-content: center;
-
-
-    /* center card inside grid cell */
-    /* align-items: center; */
     padding-left: 1rem;
     padding-top: 1rem;
     /* gap: 2rem; */
@@ -56,7 +52,6 @@
 .workflow-card {
     position: relative;
     width: 100%;
-    /* reduce card size here (80%, 75% etc.) */
     aspect-ratio: 1 / 1;
     padding: 1rem;
     margin: 0rem;
@@ -76,8 +71,6 @@
     z-index: 1;
     pointer-events: none;
     object-fit: cover;
-    /* Or contain depending on preference */
-
     padding: 0.5rem;
 }
 

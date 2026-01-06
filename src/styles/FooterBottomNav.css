@@ -4,7 +4,6 @@
 .footer-nav-wrapper {
     width: 100%;
     background-color: #063B5B;
-    /* MBBSWAY Theme Blue */
     padding: 1rem 0rem;
     display: flex;
     justify-content: center;
@@ -35,16 +34,12 @@
 
     padding-top: 0.5rem;
     padding-left: 0.5rem;
-
     /* flex-direction: row; */
 }
 
 /* ------------------------------------------
    INDIVIDUAL ITEMS
 -------------------------------------------*/
-.footer-nav-item {
-    /* padding: 5px 10px; */
-}
 
 .footer-nav-item p {
     margin: 0;
@@ -53,10 +48,6 @@
     cursor: pointer;
     white-space: nowrap;
 }
-
-/* .footer-nav-item p:hover {
-    text-decoration: underline;
-} */
 
 
 /* ------------------------------------------
@@ -87,7 +78,6 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         gap: 0.5rem;
-
         /* align-items: center; */
     }
 
@@ -98,11 +88,4 @@
     .footer-nav-item p {
         font-size: 13px;
     }
-}
-
-/* Extra small screens */
-@media (max-width: 450px) {
-    /* .footer-nav-item p {
-        font-size: 12px;
-    } */
 }

@@ -77,20 +77,15 @@
    GRID CONTAINER
 ============================= */
 
-
 .neet-left {
     padding-left: 5rem;
     padding-right: 0rem;
     display: flex;
     flex-direction: column;
-    /* <<< FIX */
     align-items: flex-start;
     /* text + button aligned properly */
     justify-content: center;
     gap: 1rem;
-    /* optional clean spacing */
-
-    /* margin-top: -1.5rem; */
 }
 
 .neet-right {
@@ -98,40 +93,6 @@
     justify-content: center;
     align-items: center;
 }
-
-
-@media (min-width: 900px) {
-
-    .neet-left,
-    .neet-right {
-        flex-basis: 50%;
-        /* Will share equal space */
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .neet-left,
-    .neet-right {
-        flex-basis: 50%;
-    }
-}
-
-@media (min-width: 920px) {
-    .neet-left-title {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        /* limit to 2 lines */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        max-width: 90%;
-        /* reduces width gradually */
-        white-space: normal;
-    }
-}
-
 
 
 .neet-left-title {
@@ -170,16 +131,33 @@
 }
 
 
-@media (min-width: 900px) {
-    .neet-book-btn {
-        width: 23%;
-    }
-}
+
 
 /* ============================================
    RESPONSIVE (Below 920px)
 ============================================ */
+
+@media (min-width: 1200px) {
+    .neet-left,
+    .neet-right {
+        flex-basis: 50%;
+    }
+}
+
 @media (max-width: 920px) {
+
+    .neet-left-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* limit to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        max-width: 90%;
+        /* reduces width gradually */
+        white-space: normal;
+    }
 
     .neet-content-wrapper {
         background: linear-gradient(90deg,
@@ -258,13 +236,22 @@
         /* removes inline gap issues */
         margin: 1rem 0 0 0;
     }
+}
 
+@media (min-width: 900px) {
+
+    .neet-left,
+    .neet-right {
+        flex-basis: 50%;
+        /* Will share equal space */
+    }
+
+    .neet-book-btn {
+        width: 23%;
+    }
 }
 
 
-/* ============================================
-   ULTRA-SMALL DEVICES (Below 420px)
-============================================ */
 @media (max-width: 420px) {
 
     /* Section main heading */

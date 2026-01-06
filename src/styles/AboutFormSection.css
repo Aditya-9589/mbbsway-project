@@ -54,10 +54,10 @@
     }
 }
 
-
 /* ----------------------------------------- */
 /* FORM CARD OUTER CONTAINER                 */
 /* ----------------------------------------- */
+
 .form-card {
     width: 96%;
     /* matches css-1px4sil at small screens */
@@ -91,6 +91,7 @@
 /* ----------------------------------------- */
 /* FORM TITLES                                */
 /* ----------------------------------------- */
+
 .form-title {
     font-size: 2rem;
     font-weight: 700;
@@ -128,6 +129,7 @@
 /* ----------------------------------------- */
 /* FORM GROUP                                 */
 /* ----------------------------------------- */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -146,6 +148,7 @@
 /* ----------------------------------------- */
 /* FORM INPUTS — Perfect MUI Look             */
 /* ----------------------------------------- */
+
 .form-input {
     width: 100%;
     padding: 14px 14px;
@@ -158,12 +161,6 @@
     transition: 0.2s ease;
     /* color: #000000; */
 }
-
-/* MUI Border on focus */
-/* .form-input:focus {
-    border-color: #115c8e;
-    box-shadow: 0 0 0 1px #115c8e;
-} */
 
 /* For select elements */
 .form-input,
@@ -185,9 +182,6 @@
 .form-input:hover,
 .form-select:hover {
     border-color: #000;
-    /* black border */
-    /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); */
-    /* slight glow */
 }
 
 .form-input::placeholder {
@@ -199,11 +193,7 @@
 .form-input:focus,
 .form-select:focus {
     border-color: #000;
-    /* bold black */
     border-width: 2px;
-    /* slightly thicker */
-    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.25); */
-    /* stronger glow */
 }
 
 
@@ -216,8 +206,6 @@
     border-radius: 8px;
     border: 1px solid #b0b0b0;
     background-color: #FCE1EA;
-    /* closed state */
-    /* color: #000000; */
     color: #424242;
     outline: none;
     font-family: "Montserrat", sans-serif;
@@ -231,19 +219,18 @@
     background-size: 16px;
 }
 
-/* OPEN DROPDOWN LIST OVERRIDE (Chrome, Edge, Safari) */
+/* OPEN DROPDOWN LIST OVERRIDE */
 .form-select option {
     background-color: #fff !important;
-    /* dropdown should be white */
     color: #000 !important;
-    /* dropdown text black */
 }
 
 
 
 /* ----------------------------------------- */
-/* BUTTON — matches .css-134dkvr exactly      */
+/* BUTTON — matches                          */
 /* ----------------------------------------- */
+
 .register-btn {
     display: inline-flex;
     justify-content: center;
@@ -264,14 +251,13 @@
 }
 
 .register-btn:hover {
-    /* opacity: 0.9; */
     box-shadow: 0px 2px 4px #5a5353;
-    /* transform: translateY(-2px); */
 }
 
 /* ----------------------------------------- */
 /* SOCIAL ICONS                               */
 /* ----------------------------------------- */
+
 .social-section {
     display: flex;
     align-items: center;
@@ -283,7 +269,6 @@
     font-weight: 600;
     color: #000;
     margin: 0;
-    /* Removes default p tag spacing */
 }
 
 .social-icons {
@@ -310,6 +295,7 @@
 /* ----------------------------------------- */
 /* STATS SECTION                              */
 /* ----------------------------------------- */
+
 .stats-box {
     color: #115C8E;
     text-align: center;
@@ -327,7 +313,7 @@
     font-size: 1rem;
 }
 
-/* Always keep 2-column structure —_override Tailwind's grid-cols-1 on small screens */
+/* Always keep 2-column structure — */
 .about-container form {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -344,7 +330,6 @@
 /* RESPONSIVE FORM LAYOUT         */
 /* ------------------------------ */
 
-/* When form shifts downward (below 900px) */
 @media (max-width: 900px) {
 
     .about-container {
@@ -352,10 +337,8 @@
         gap: 2rem;
     }
 
-    /* Reduce Keep Connected size */
     .form-title {
         font-size: 1.5rem;
-        /* earlier 2rem */
     }
 
     .keep-text {
@@ -367,21 +350,16 @@
         border-bottom: 3px solid #EA244F;
     }
 
-    /* Subtitle smaller */
     .form-subtitle {
         font-size: 1rem;
     }
 
-    /* STAT NUMBERS smaller */
     .stat-number {
         font-size: 1rem;
-        /* earlier 1.2rem */
     }
 
-    /* STAT TEXT smaller */
     .stat-text {
         font-size: 0.85rem;
-        /* earlier 1rem */
     }
 
     @media (max-width: 900px) {
@@ -413,7 +391,6 @@
     .right-section .form-card {
         padding: 10px !important;
         height: auto !important;
-        /* allows card to shrink */
     }
 
     /* FORM TEXT + INPUTS */
@@ -440,7 +417,6 @@
     /* FIX FIELD WIDTH SHRINKING */
     .about-container form {
         grid-template-columns: 1fr 1fr !important;
-        /* still 2 per row */
         gap: 6px !important;
     }
 
@@ -453,7 +429,7 @@
         grid-column: span 2 !important;
     }
 
-    /* DEGREE full width (optional) */
+    /* DEGREE full width */
     .degree-full {
         grid-column: span 2 !important;
     }

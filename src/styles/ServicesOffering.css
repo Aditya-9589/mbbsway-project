@@ -41,7 +41,6 @@
     height: 0.3rem;
     background: #EA244F;
     margin: 0rem 0 0 14rem;
-    /* border-radius: 999px; */
 }
 
 /* MAIN LAYOUT */
@@ -49,7 +48,6 @@
 .services-layout {
     margin-top: 3.5rem;
     display: flex;
-    /* align-items: flex-start; */
     align-items: center;
     gap: 3rem;
 }
@@ -71,7 +69,6 @@
     padding: 0.9rem 1.4rem;
     border-radius: 1rem;
     border: 0.2rem solid;
-    /* background: linear-gradient(90deg,var(--mbbs-pink),#c463a0,var(--mbbs-blue)); */
     background: linear-gradient(to left, #115c8e, #f4829d);
     color: #ffffff;
     font-size: 1.2rem;

@@ -17,7 +17,7 @@
     width: 100%;
     border: 10px solid transparent;
 
-    /* EXACT SAME GRADIENT USED ON THE WEBSITE */
+    /* SAME GRADIENT USED ON THE WEBSITE */
     background:
         /* white background inside the border */
         linear-gradient(#ffffff, #ffffff) padding-box,

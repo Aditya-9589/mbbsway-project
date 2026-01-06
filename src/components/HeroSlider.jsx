@@ -6,25 +6,24 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "../styles/HeroSlider.css";
 
-const HeroSlider = ({ onStateChange }) => {
-
-    const slides = [
-        "BIHAR",
-        "GUJARAT",
-        "KARNATAKA",
-        "MADHYA PRADESH"
-    ]
-
-    const sliderImages = [
-        "https://admin.mbbsway.in/storage/app/public/images/slider/7pK71QN7PRmAs4SHCYTuTV27WDVLvwm8bLPoxnxk.png",
-        "https://admin.mbbsway.in/storage/app/public/images/slider/bgjArIBnfN2BiKkOYC7y3PTOIqFAyAHuZKqlKtxY.png",
-        "https://admin.mbbsway.in/storage/app/public/images/slider/t8ptLnSkTNxKRDI1yXfEtBbTeMkVeOM6h0d19ZVu.png",
-        "https://admin.mbbsway.in/storage/app/public/images/slider/XdPYe6TjjTREa4KsJ61Se2KvvVuaGbiGMvbKaigU.png"
-    ];
-
+const HeroSlider = ({
+    sliders = [],
+    states = [],
+    onStateChange,
+}) => {
 
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    if (!sliders.length) return null;
+
+    const labels = states.map(
+        (state) => state.title.toUpperCase()
+    );
+
+    const getImageUrl = (path) => {
+        return `https://admin.mbbsway.in/storage/app/${path}`;
+    }
 
     const handleSwiperInit = (swiper) => {
         swiperRef.current = swiper;
@@ -38,7 +37,8 @@ const HeroSlider = ({ onStateChange }) => {
     };
 
     const goToSlide = (index) => {
-        if (swiperRef.current) swiperRef.current.slideTo(index);
+        // if (swiperRef.current) swiperRef.current.slideTo(index);
+        swiperRef.current?.slideTo(index);
 
         // Also updates cards
         onStateChange(index);
@@ -64,11 +64,12 @@ const HeroSlider = ({ onStateChange }) => {
                 onSlideChange={handleSlideChange}
                 className="w-full h-full"
             >
-                {sliderImages.map((img, index) => (
-                    <SwiperSlide key={index}>
+                {sliders.map((slide, index) => (
+                    // <SwiperSlide key={index}>
+                    <SwiperSlide key={slide.id || index}>
                         <img
-                            src={img}
-                            alt={`Slide ${index + 1}`}
+                            src={getImageUrl(slide.bg_image)}
+                            alt={slide.title}
                             className="w-full h-full object-cover"
                         />
                     </SwiperSlide>
@@ -76,10 +77,11 @@ const HeroSlider = ({ onStateChange }) => {
             </Swiper>
 
 
-            {/* ✅ External Pagination on the RIGHT EDGE */}
+            {/* External Pagination on the RIGHT EDGE */}
             <div className="external-pagination absolute top-1/2 -translate-y-1/2"></div>
+
             <div className="bottom-btn-wrapper">
-                {slides.map((label, index) => (
+                {labels.map((label, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}

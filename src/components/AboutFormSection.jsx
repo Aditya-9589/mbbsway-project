@@ -1,41 +1,107 @@
 import React from "react";
 import "../styles/AboutFormSection.css";
 
-const AboutFormSection = () => {
+const STATES = [
+    "Andhra Pradesh",
+    "Andaman & Nicobar",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Dadar & Nagar Haveli",
+    "Delhi",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu & Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Odisha",
+    "Pondicherry",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttrakhand",
+    "West Bengal",
+];
+
+const DEGREES = [
+    "MBBS in India",
+    "BDS in India",
+    "BAMS in India",
+    "BHMS in India",
+    "BVSC in India",
+    "BNYC in India",
+    "BUMC in India",
+    "MD/MS in India",
+    "MDS in India",
+    "Cps-Fcps in India",
+];
+
+const SELECT_FIELDS = [
+    {
+        name: "state",
+        placeholder: "Select State",
+        options: STATES
+    },
+    {
+        name: "degree",
+        placeholder: "Select Degree",
+        options: DEGREES
+    }
+];
+
+
+const AboutFormSection = ({ aboutUs }) => {
+
+    if (!aboutUs) return null;
+
     return (
         <div className="about-container max-w-[1350px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
 
             {/* LEFT SECTION */}
             <div className="left-section">
                 <h2 className="about-title">
-                    <span>About Us</span>
+                    <span>{aboutUs.title}</span>
                     <div className="underline"></div>
                 </h2>
 
-                <p className="about-text">
-                    Welcome to MBBSWAY, your trusted partner in navigating the complex journey of medical college admissions. Established with a vision to empower aspiring medical professionals.
-                    Since 2014, MBBSway has been a trusted and dedicated consultancy for guiding aspiring medical students toward fulfilling their dreams of becoming healthcare professionals.
-                    With a decade of expertise, we specialize in providing seamless admission assistance to students seeking MBBS and other medical courses in reputed colleges and universities across India and abroad.
-                    At MBBSway, we pride ourselves on offering personalized counseling, transparent processes, and end-to-end support—from college selection and application procedures to visa assistance for international studies.
-                    Our mission is to simplify the complexities of medical admissions and empower students to achieve their career goals with confidence and clarity.
-                    With a network of reputable institutions, a proven track record, and a commitment to ethical practices, MBBSway has become the go-to destination for medical aspirants looking for guidance and support.
-                    Join us to make your journey into the medical profession smooth, informed, and successful.
-                    We offer expert guidance .We typically provide assistance to students who are seeking admission to medical colleges and universities.
-                    We offer expert guidance .We typically provide assistance to students who are seeking admission to medical colleges and universities.
-                </p>
-                <a href="/company/about" className="learn-more-link">Learn More</a>
+                <div
+                    className="about-text"
+                    dangerouslySetInnerHTML={{ __html: aboutUs.description }}
+                />
+
+                <a 
+                    href={aboutUs.youtube_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="learn-more-link"
+                >
+                    Learn More
+                </a>
             </div>
 
             {/* RIGHT SECTION */}
             <div className="right-section w-full flex justify-center">
 
-                {/* Wrapper same as css-10i8vsg */}
+                {/* Wrapper  */}
                 <div className="relative w-full h-[32.5rem] sm:w-[98%]">
 
-                    {/* Inner container same as css-17s75hm */}
+                    {/* Inner container  */}
                     <div className="absolute top-8 w-full h-[95%] flex justify-center">
 
-                        {/* Form Card same as css-1px4sil */}
+                        {/* Form Card */}
                         <div className="relative w-[96%] sm:w-full h-full">
 
                             {/* BACKGROUND BORDER FRAME */}
@@ -96,60 +162,19 @@ const AboutFormSection = () => {
                                         />
                                     </div>
 
-                                    <div className="form-group">
-                                        <select className="form-select">
-                                            <option>Select State</option>
-                                            <option>Andhra Pradesh</option>
-                                            <option>Andaman & Nicobar</option>
-                                            <option>Arunachal Pradesh</option>
-                                            <option>Assam</option>
-                                            <option>Bihar</option>
-                                            <option>Chhattisgarh</option>
-                                            <option>Dadar & Nagar Haveli</option>
-                                            <option>Delhi</option>
-                                            <option>Goa</option>
-                                            <option>Gujarat</option>
-                                            <option>Haryana</option>
-                                            <option>Himachal Pradesh</option>
-                                            <option>Jammu & Kashmir</option>
-                                            <option>Jharkhand</option>
-                                            <option>Karnataka</option>
-                                            <option>Kerala</option>
-                                            <option>Madhya Pradesh</option>
-                                            <option>Maharashtra</option>
-                                            <option>Manipur</option>
-                                            <option>Meghalaya</option>
-                                            <option>Mizoram</option>
-                                            <option>Odisha</option>
-                                            <option>Pondicherry</option>
-                                            <option>Punjab</option>
-                                            <option>Rajasthan</option>
-                                            <option>Sikkim</option>
-                                            <option>Tamil Nadu</option>
-                                            <option>Telangana</option>
-                                            <option>Tripura</option>
-                                            <option>Uttar Pradesh</option>
-                                            <option>Uttrakhand</option>
-                                            <option>West Bengal</option>
-                                        </select>
-                                    </div>
-
-                                    {/* LINE 4 — SELECT DEGREE + BUTTON */}
-                                    <div className="form-group">
-                                        <select className="form-select">
-                                            <option>Select Degree</option>
-                                            <option>MBBS in India</option>
-                                            <option>BDS in India</option>
-                                            <option>BAMS in India</option>
-                                            <option>BHMS in India</option>
-                                            <option>BVSC in India</option>
-                                            <option>BNYC in India</option>
-                                            <option>BUMC in India</option>
-                                            <option>MD/MS in India</option>
-                                            <option>MDS in India</option>
-                                            <option>Cps-Fcps in India</option>
-                                        </select>
-                                    </div>
+                                    {/* STATE & DEGREE (MAP BASED)  */}
+                                    {SELECT_FIELDS.map((field, index) => (
+                                        <div className="form-group" key={index} >
+                                            <select name={field.name} id="" className="form-select">
+                                                <option value="">{field.placeholder}</option>
+                                                {field.options.map((option) => (
+                                                    <option key={option} value={option} >
+                                                        {option}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    ))}
 
                                     <div className="flex items-end">
                                         <button className="register-btn w-full">
