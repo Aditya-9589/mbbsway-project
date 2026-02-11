@@ -7,7 +7,7 @@ const NeetConsultancy = ({ bookNowData }) => {
 
     if (!bookNowData) return null;
 
-    const { title, sub_title, banner } = bookNowData;
+    const { title, sub_title } = bookNowData;
 
     return (
         <section className="neet-section">

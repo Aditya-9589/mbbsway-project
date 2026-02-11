@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/workflow.css";
+import "../../styles/Workflow.css";
 import cardBg from "../../assets/workflow/workflow-card.png"
 
 const BASE_URL = "https://admin.mbbsway.in/storage/app/";
